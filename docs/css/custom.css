@@ -1,0 +1,106 @@
+/* Overall background and text color adjustments */
+body {
+  background-color: #1e2129;
+  color: #cfcfcf;
+  font-size: 12px; /* General font size for the body */
+}
+
+:root {
+  --md-primary-fg-color: #841f36;          /* Standard primary color */
+  --md-primary-fg-color--light: #c04e65;   /* Lighter shade for hover states, etc. */
+  --md-primary-fg-color--dark: #5f1324;    /* Darker shade for active states, etc. */
+}
+
+/* Navbar Styling */
+.md-header-nav {
+  background-color: #1e2129; /* Semi-transparent black */
+  border-bottom: 1px solid #00bcd4; /* Neon cyan border */
+  height: 25px;
+  font-size: 16px; /* Adjusted font size for navbar */
+}
+
+.md-header-nav__title {
+  color: #00bcd4; /* Cyan text */
+}
+
+/* Sidebar Navigation Link Styling */
+.md-sidebar--primary .md-nav__link {
+  color: #00bcd4; /* Blue for normal sidebar links */
+  padding-left: 16px; /* Adds padding to move text away from the sidebar edge */
+  font-size: 14px; /* Further reduced sidebar link font size */
+}
+
+.md-sidebar--primary .md-nav__link:hover {
+  background-color: #272a35; /* Dark background on hover for sidebar links */
+  color: #74ff51; /* Brighter shade for hover */
+}
+
+.md-sidebar--primary .md-nav__link--active {
+  color: #74ff51; /* Keeping active sidebar links neon green for visibility */
+  border-left: 3px solid #74ff51; /* Green border to indicate active section */
+  padding-left: 13px; /* Adjust padding to account for the border thickness */
+}
+
+/* Main Content Specific Styling */
+.md-grid, .md-typeset {
+  font-size: 14px; /* Setting font size for the main content */
+}
+
+/* Content Header Font Sizes */
+.md-typeset h1 {
+  font-size: 22px; /* Reduced size for main headers */
+}
+
+.md-typeset h2 {
+  font-size: 18px; /* Reduced size for secondary headers */
+}
+
+.md-typeset h3 {
+  font-size: 16px; /* Reduced size for tertiary headers */
+}
+
+.md-typeset h4, .md-typeset h5, .md-typeset h6 {
+  font-size: 14px; /* Small headers get smaller font size */
+}
+
+/* Enhanced Code Blocks Styling */
+.md-typeset pre {
+  background: linear-gradient(to right, #242830 0%, #292d3e 100%); /* Gradient background */
+  border: 1px solid #00bcd4; /* Neon cyan border */
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.3); /* Soft glow effect */
+  padding: 10px; /* Added padding for a better layout */
+  border-radius: 4px; /* Rounded corners */
+  overflow-x: auto; /* Handles horizontal overflow by adding a scrollbar */
+}
+
+.md-typeset pre code {
+  background: transparent; /* Ensure code inside pre does not have its own background */
+  border: none; /* Remove border from code elements */
+  box-shadow: none; /* Remove any shadow from code elements */
+  padding: 0; /* Remove padding inside code elements to prevent misalignment */
+  color: #8abeb7; /* Soft cyan text for better visibility */
+  font-family: 'Fira Code', monospace; /* Ensuring a monospace font for code */
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3); /* Subtle text shadow for depth */
+  font-size: 11px; /* Smaller font size for code to fit more content */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 12px; /* Ensuring footer text matches body font size */
+}
+
+/* Visited Link Styling */
+.md-sidebar--primary .md-nav__link:visited,
+.md-header-nav__title:visited {
+  color: #00bcd4; /* Change visited links color to blue */
+}
+
+/* Not Visited Link Styling */
+.md-sidebar--primary .md-nav__link:not(:visited),
+.md-header-nav__title:not(:visited) {
+  color: #74ff51; /* Blue for not visited links */
+}

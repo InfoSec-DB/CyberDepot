@@ -1,0 +1,90 @@
+site_name: CyberDepot - Payload Repository
+site_url: https://github.com/InfoSec-DB/CyberDepot
+repo_url: https://github.com/InfoSec-DB/CyberDepot
+
+nav:
+  - CyberDepot: index.md
+  - Payloads: payloads.md
+  - Reverse Shells: revshells.md
+  - WiFi Hacking: wifi.md
+  - Password Cracking: passcrack.md
+  - Google Dorks: googledorks.md
+
+
+  - Botnets: botnets.md
+
+theme:
+  name: material
+  features:
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.expand
+    - navigation.prune
+    - toc.follow
+    - navigation.top
+    - header.autohide
+  language: en
+  palette:
+    - scheme: slate  # Use a dark scheme as the base
+      primary: custom  # Bright red for primary actions and highlights
+      accent: grey  # Grey for less prominent accents
+  dark_mode: true  # Ensure that dark mode is the default
+  font:
+    text: "Roboto Mono"  # Monospaced font for that code-like feel
+    code: "Fira Code"  # Excellent for showing code snippets with ligatures
+  logo: "img/logo.svg"  # Custom logo for branding
+  favicon: "img/favicon.ico"  # Custom favicon
+  icon:
+    repo: fontawesome/brands/github-alt
+  titles_only: true
+  include_homepage_in_sidebar: false
+  include_sidebar: true
+
+plugins:
+  - search
+
+extra_css:
+  - css/custom.css  # Additional styles for customization
+
+extra_javascript:
+  - js/custom.js  # For any special interactive elements or fixes
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/InfoSec-DB
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/InfoSec-DB
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/InfoSec-DB
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/InfoSec-DB/" target="_blank" rel="noopener">InfoSec-DB</a>
