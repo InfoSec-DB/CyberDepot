@@ -9,9 +9,11 @@ nav:
   - WiFi Hacking: wifi.md
   - Password Cracking: passcrack.md
   - Google Dorks: googledorks.md
-
-
   - Botnets: botnets.md
+  - Reconnaissance:
+      - Shodan Guides: shodan.md  # Submenu for Shodan under Reconnaissance
+      - Nmap Cheat Sheet: nmap.md # Submenu for Nmap under Reconnaissance
+
 
 theme:
   name: material
