@@ -4,6 +4,7 @@
 **Date**: 2024-05-27  
 **Affected Software**: Boelter Blue System Management  
 **Version**: 1.3  
+**Google Dork**: "Powered by Boelter Blue" 
 **Vendor**: Boelter Blue ([boelter.com](https://www.boelter.com/))  
 **Software Link**: [Google Play Store](https://play.google.com/store/apps/details?id=com.anchor5digital.anchor5adminapp&hl=en_US)  
 
@@ -197,7 +198,7 @@ To mitigate these vulnerabilities, it is recommended to:
 
 ## Contact Information
 
-For any questions or concerns regarding this vulnerability, please contact us at: infosec-db@protonmail.com
+For any questions or concerns regarding this vulnerability, please contact us at: infosecdb@protonmail.com
 
 ----------
 
