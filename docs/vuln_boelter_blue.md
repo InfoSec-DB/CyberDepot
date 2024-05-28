@@ -186,9 +186,9 @@ To mitigate these vulnerabilities, it is recommended to:
 
 ## Disclosure Timeline
 
--   **2024-05-27**: Vulnerabilities discovered by CBKB team.
--   **2024-05-28**: Vendor notified.
--   **2024-06-04**: Vendor acknowledged and began remediation process.
+-   **2023**: Vulnerabilities discovered by CBKB team.
+-   **2023**: Vendor notified.
+-   **2024**: Vendor notified.
 -   **2024-06-20**: Public disclosure and CVE request submitted.
 
 ## CVE Information
