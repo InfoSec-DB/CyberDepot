@@ -13,6 +13,8 @@ nav:
   - Reconnaissance:
       - Shodan Guides: shodan.md  # Submenu for Shodan under Reconnaissance
       - Nmap Cheat Sheet: nmap.md # Submenu for Nmap under Reconnaissance
+  - Vulnerability Disclosures: 
+      - Boelter Blue System Management v1.3: vuln_boelter_blue.md
 
 
 theme:
