@@ -189,7 +189,7 @@ To mitigate these vulnerabilities, it is recommended to:
 -   **2023**: Vulnerabilities discovered by CBKB team.
 -   **2023**: Vendor notified.
 -   **2024**: Vendor notified.
--   **2024-06-20**: Public disclosure and CVE request submitted.
+-   **2024-05-27**: Public disclosure and CVE request submitted.
 
 ## CVE Information
 
