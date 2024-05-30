@@ -16,8 +16,10 @@ nav:
   - Authentication Bypass:
       - OTP Bypass Techniques: otpbypass.md
       - Password Reset Poisoning: passresetpoison.md
+      - 2FA Bypass via CSRF: 2fabypasscsrf.md
   - Vulnerability Disclosures: 
       - Boelter Blue System Management v1.3: vuln_boelter_blue.md
+
 
 
 
