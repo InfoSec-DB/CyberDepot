@@ -11,10 +11,14 @@ nav:
   - Google Dorks: googledorks.md
   - Botnets: botnets.md
   - Reconnaissance:
-      - Shodan Guides: shodan.md  # Submenu for Shodan under Reconnaissance
-      - Nmap Cheat Sheet: nmap.md # Submenu for Nmap under Reconnaissance
+      - Shodan Guides: shodan.md
+      - Nmap Cheat Sheet: nmap.md
+  - Authentication Bypass:
+      - OTP Bypass Techniques: otpbypass.md
+      - Password Reset Poisoning: passresetpoison.md
   - Vulnerability Disclosures: 
       - Boelter Blue System Management v1.3: vuln_boelter_blue.md
+
 
 
 theme:
