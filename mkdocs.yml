@@ -4,7 +4,9 @@ repo_url: https://github.com/InfoSec-DB/CyberDepot
 
 nav:
   - CyberDepot: index.md
-  - Payloads: payloads.md
+  - Payloads:
+      - Overview: payloads.md
+      - XSS Payloads: xsspayloads.md
   - Reverse Shells: revshells.md
   - WiFi Hacking: wifi.md
   - Password Cracking: passcrack.md
