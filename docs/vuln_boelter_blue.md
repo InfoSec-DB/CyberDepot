@@ -200,6 +200,7 @@ To mitigate these vulnerabilities, it is recommended to:
 
 -   [Boelter Blue Homepage](https://www.boelter.com/)
 -   [Google Play Store](https://play.google.com/store/apps/details?id=com.anchor5digital.anchor5adminapp&hl=en_US)
+-   [CVE - MITRE](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36840)
 
 ## Disclosure Timeline
 
@@ -213,7 +214,7 @@ To mitigate these vulnerabilities, it is recommended to:
 
 ## CVE Information
 
--   **CVE ID**: CVE-2024-36840
+-   **CVE ID**: [CVE-2024-36840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36840)
 
 ## Contact Information
 
