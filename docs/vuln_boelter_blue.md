@@ -207,6 +207,9 @@ To mitigate these vulnerabilities, it is recommended to:
 -   **2023**: Vendor notified.
 -   **2024**: Vendor notified.
 -   **2024-05-27**: Public disclosure and CVE request submitted.
+    **2024-06-4**: RESERVED CVE By mitre
+    **2024-06-4**: Exploit disclosed to exploit-db
+    **2024-06-4**: Exploit disclosed to packetstorm
 
 ## CVE Information
 
