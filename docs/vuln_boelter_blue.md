@@ -3,7 +3,7 @@
 **Discovered by**: [CBKB] - DeadlyData, R4d1x  
 **Date**: 2024-05-27  
 **Affected Software**: Boelter Blue System Management
-**CVE**: CVE-2024-36840
+**CVE**: CVE-2024-36840 
 **Version**: 1.3  
 **Google Dork**: "Powered by Boelter Blue" 
 **Vendor**: Boelter Blue ([boelter.com](https://www.boelter.com/))  
