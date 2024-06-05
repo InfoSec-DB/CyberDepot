@@ -2,7 +2,7 @@
 
 **Discovered by**: [CBKB] - DeadlyData, R4d1x  
 **Date**: 2024-05-27  
-**Affected Software**: Boelter Blue System Management  
+**Affected Software**: Boelter Blue System Management
 **CVE**: CVE-2024-36840
 **Version**: 1.3  
 **Google Dork**: "Powered by Boelter Blue" 
@@ -207,9 +207,9 @@ To mitigate these vulnerabilities, it is recommended to:
 -   **2023**: Vendor notified.
 -   **2024**: Vendor notified.
 -   **2024-05-27**: Public disclosure and CVE request submitted.
-    **2024-06-4**: RESERVED CVE By mitre
-    **2024-06-4**: Exploit disclosed to exploit-db
-    **2024-06-4**: Exploit disclosed to packetstorm
+-   **2024-06-4**: RESERVED CVE By mitre
+-   **2024-06-4**: Exploit disclosed to exploit-db
+-   **2024-06-4**: Exploit disclosed to packetstorm
 
 ## CVE Information
 
