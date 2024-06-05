@@ -7,7 +7,7 @@
 **Google Dork**: "Powered by Boelter Blue" 
 **Vendor**: Boelter Blue ([boelter.com](https://www.boelter.com/))  
 **Software Link**: [Google Play Store](https://play.google.com/store/apps/details?id=com.anchor5digital.anchor5adminapp&hl=en_US)  
-# Tested on: Linux Debian 9 (stretch), Apache 2.4.25, MySQL >= 5.0.12
+**Tested on**: Linux Debian 9 (stretch), Apache 2.4.25, MySQL >= 5.0.12
 **CVE**: CVE-2024-36840
 
 
