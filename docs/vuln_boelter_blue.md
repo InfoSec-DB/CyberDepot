@@ -138,7 +138,7 @@ These vulnerabilities can be exploited to achieve the following:
     +----+-----------------+--------------------------------------------------------+---------------+------------------------------------+----------+------------+----------------+
     | id | ip              | url                                                    | name          | mainURL                            | username | password   | displayName    |
     +----+-----------------+--------------------------------------------------------+---------------+------------------------------------+----------+------------+----------------+
-    | 1  | 104.197.215.116 | /cloudsql/patrick-cudahy:us-central1:patrick-cudahy-db | PatrickCudahy | https://patrick-cudahy.appspot.com | root     | S0lu****   | Patrick cudahy |
+    | 1  | 104.197.215.116 | /cloudsql/patrick-cudahy:us-central1:patrick-cudahy-db | PatrickCudahy | https://patrick-cudahy.appspot.com | root     | S0lu****   | Patrick cuda** |
     | 2  | 35.184.62.89    | /cloudsql/our-event-app:us-central1:oureventapp-db     | OurEventApp   | https://our-event-app.appspot.com  | root     | S0lu****   | OurEventApp    |
     +----+-----------------+--------------------------------------------------------+---------------+------------------------------------+----------+------------+----------------+
 
