@@ -1,9 +1,9 @@
 
-# CBKB-LeakIX Scanner 🚀
+# LeakIX Scanner 🚀
 
 ## Description
 
-CBKB-LeakIX Scanner is a powerful tool designed to interact with the LeakIX API, enabling red teamers and exploitation specialists to search for exposed and vulnerable configurations across the internet. This tool helps in identifying critical security issues by querying various plugins available on LeakIX and filtering the results based on specified severity levels.
+LeakIX Scanner is a powerful tool designed to interact with the LeakIX API, enabling red teamers and exploitation specialists to search for exposed and vulnerable configurations across the internet. This tool helps in identifying critical security issues by querying various plugins available on LeakIX and filtering the results based on specified severity levels.
 
 ## Features
 
@@ -15,14 +15,9 @@ CBKB-LeakIX Scanner is a powerful tool designed to interact with the LeakIX API,
 
 ## Screenshot
 ![LeakIX Scanner](https://colorblindkeybangers.com/imgs/cbkb-scanner1.png)
-![LeakIX Scanner](https://colorblindkeybangers.com/imgs/cbkb-scanner2.png)
 
 ## Video Demo
-
-<video width="320" height="240" controls>
-  <source src="https://colorblindkeybangers.com/imgs/cbkb-leakixvid.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Demo](https://colorblindkeybangers.com/imgs/cbkb-leakixvid.mp4) 
 
 ## Usage
 
@@ -75,4 +70,4 @@ CBKB-LeakIX Scanner is a powerful tool designed to interact with the LeakIX API,
 
 ## Disclaimer
 
-Explore our extensive collection of payloads and other resources for red teamers and exploitation specialists. These resources are curated to aid you in your penetration testing and vulnerability assessment tasks. We are not responsible for any damages or exploitation caused by scripts. Use at your own risk⚠️.
+Explore our extensive collection of payloads and other resources for red teamers and exploitation specialists. These resources are curated to aid you in your penetration testing and vulnerability assessment tasks. We are not responsible for any damages or exploitation caused by scripts. Use at your own risk.
