@@ -8,7 +8,7 @@ import re
 import logging
 import sys
 
-API_KEY = 'MIHSAb5UEEwGVKUVt80IB5Notk_Hj_R2XFmKTpXPkWH5ARuN'
+API_KEY = 'API KEY GOES HERE'
 BASE_URL = 'https://leakix.net'
 
 def setup_logging(verbosity):
