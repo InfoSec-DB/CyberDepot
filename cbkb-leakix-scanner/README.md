@@ -1,7 +1,11 @@
 
   
 
+  
+
 # LeakIX Scanner 🚀
+
+  
 
   
 
@@ -9,7 +13,11 @@
 
   
 
+  
+
 LeakIX Scanner is a powerful tool designed to interact with the LeakIX API, enabling security researchers and bug bounty hunters to search for exposed and vulnerable configurations across the internet. This tool helps in identifying critical security issues by querying various plugins available on LeakIX and filtering the results based on specified severity levels.
+
+  
 
   
 
@@ -17,19 +25,35 @@ LeakIX Scanner is a powerful tool designed to interact with the LeakIX API, enab
 
   
 
+  
+
 -  **Search LeakIX** 🔍: Query the LeakIX API for specific plugins and severity levels.
+
+  
 
 -  **Pagination** 📄: Automatically handles pagination to fetch results across multiple pages.
 
+  
+
 -  **Detailed Logging** 📝: Adjustable verbosity to provide insights into the scanning process.
 
+  
+
 -  **Output Formats** 📂: Save results in JSON, CSV, or plain text formats.
+
+  
 
 -  **Plugin Management** 🛠️: Lists available plugins and validates user-specified plugins against a predefined list.
 
   
 
+## Screenshot
+![LeakIX Scanner](https://colorblindkeybangers.com/imgs/cbkb-scanner1.png) ![LeakIX Scanner](https://colorblindkeybangers.com/imgs/cbkb-scanner2.png)
+  
+
 ## Usage
+
+  
 
   
 
@@ -37,13 +61,23 @@ LeakIX Scanner is a powerful tool designed to interact with the LeakIX API, enab
 
   
 
+  
+
 ```sh
 
-git clone https://github.com/InfoSec-DB/CyberDepot.git
-cd CyberDepot
-cd cbkb-leakix-scanner
+  
+
+git  clone  https://github.com/InfoSec-DB/CyberDepot.git
+
+cd  CyberDepot
+
+cd  cbkb-leakix-scanner
+
+  
 
 ```
+
+  
 
   
 
@@ -51,11 +85,19 @@ cd cbkb-leakix-scanner
 
   
 
+  
+
 ```sh
 
-pip install -r requirements.txt
+  
+
+pip  install  -r  requirements.txt
+
+  
 
 ```
+
+  
 
   
 
@@ -63,11 +105,19 @@ pip install -r requirements.txt
 
   
 
+  
+
 ```sh
 
-python cbkb-leakix.py -p ApacheStatusPlugin -s medium -o results.json --format json
+  
+
+python  cbkb-leakix.py  -p  ApacheStatusPlugin  -s  medium  -o  results.json  --format  json
+
+  
 
 ```
+
+  
 
   
 
@@ -75,19 +125,35 @@ python cbkb-leakix.py -p ApacheStatusPlugin -s medium -o results.json --format j
 
   
 
+  
+
 -  `-p, --plugins` 🎯: Specify the plugins to search for.
+
+  
 
 -  `-s, --severity` ⚠️: Specify the severity level to filter results (`low`, `medium`, `high`, `critical`).
 
+  
+
 -  `-o, --output` 💾: Specify the output file to save results.
+
+  
 
 -  `--format` 📋: Specify the output format (`json`, `txt`, `csv`), default is `txt`.
 
+  
+
 -  `-v, --verbosity` 🔊: Increase verbosity level (use `-v`, `-vv`, `-vvv`).
+
+  
 
 -  `--list-plugins` 📜: List all available plugins.
 
+  
+
 -  `--pages` 📑: Specify the number of pages to fetch (default: 5).
+
+  
 
   
 
@@ -95,18 +161,32 @@ python cbkb-leakix.py -p ApacheStatusPlugin -s medium -o results.json --format j
 
   
 
+  
+
 -  **Basic Search**:
+
+  
 
 ```sh
 
-python cbkb-leakix.py -p ApacheStatusPlugin -o results.txt
+  
+
+python  cbkb-leakix.py  -p  ApacheStatusPlugin  -o  results.txt
+
+  
 
 ```
 
   
 
+  
+
 -  **Github Exposed Config's Targeting Severity**:
 
+  
+
 ```sh
+
+  
 
 python  cbkb-leakix.py  -p  GitConfigHttpPlugin  -s  critical  -o  results.txt  -vv
