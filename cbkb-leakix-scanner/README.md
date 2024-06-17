@@ -1,9 +1,9 @@
 
-# LeakIX Scanner 🚀
+# CBKB-LeakIX Scanner 🚀
 
 ## Description
 
-LeakIX Scanner is a powerful tool designed to interact with the LeakIX API, enabling red teamers and exploitation specialists to search for exposed and vulnerable configurations across the internet. This tool helps in identifying critical security issues by querying various plugins available on LeakIX and filtering the results based on specified severity levels.
+CBKB-LeakIX Scanner is a powerful tool designed to interact with the LeakIX API, enabling red teamers and exploitation specialists to search for exposed and vulnerable configurations across the internet. This tool helps in identifying critical security issues by querying various plugins available on LeakIX and filtering the results based on specified severity levels.
 
 ## Features
 
@@ -16,6 +16,9 @@ LeakIX Scanner is a powerful tool designed to interact with the LeakIX API, enab
 ## Screenshot
 ![LeakIX Scanner](https://colorblindkeybangers.com/imgs/cbkb-scanner1.png)
 ![LeakIX Scanner](https://colorblindkeybangers.com/imgs/cbkb-scanner2.png)
+
+## Video Demo
+[![LeakIX Scanner](https://colorblindkeybangers.com/imgs/cbkb-leakixvid.mp4)](https://colorblindkeybangers.com/imgs/cbkb-leakixvid.mp4)
 
 ## Usage
 
