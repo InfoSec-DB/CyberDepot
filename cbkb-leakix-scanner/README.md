@@ -18,7 +18,11 @@ CBKB-LeakIX Scanner is a powerful tool designed to interact with the LeakIX API,
 ![LeakIX Scanner](https://colorblindkeybangers.com/imgs/cbkb-scanner2.png)
 
 ## Video Demo
-[![LeakIX Scanner](https://colorblindkeybangers.com/imgs/cbkb-leakixvid.mp4)](https://colorblindkeybangers.com/imgs/cbkb-leakixvid.mp4)
+
+<video width="320" height="240" controls>
+  <source src="https://colorblindkeybangers.com/imgs/cbkb-leakixvid.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Usage
 
