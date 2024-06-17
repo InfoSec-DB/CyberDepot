@@ -68,4 +68,4 @@ LeakIX Scanner is a powerful tool designed to interact with the LeakIX API, enab
 
 ## Disclaimer
 
-Explore our extensive collection of payloads and other resources for red teamers and exploitation specialists. These resources are curated to aid you in your penetration testing and vulnerability assessment tasks. We are not responsible for any damages or exploitation caused by scripts. Use at your own risk.
+Explore our extensive collection of payloads and other resources for red teamers and exploitation specialists. These resources are curated to aid you in your penetration testing and vulnerability assessment tasks. We are not responsible for any damages or exploitation caused by scripts. Use at your own risk⚠️.
