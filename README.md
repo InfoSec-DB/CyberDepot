@@ -40,3 +40,4 @@ Check out our documented vulnerabilities and CVEs, complete with detailed breakd
 1. **Clone the repo**:
    ```sh
    git clone https://github.com/InfoSec-DB/CyberDepot.git
+   cd CyberDepot

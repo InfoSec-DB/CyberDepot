@@ -40,8 +40,8 @@ LeakIX Scanner is a powerful tool designed to interact with the LeakIX API, enab
 ```sh
 
 git clone https://github.com/InfoSec-DB/CyberDepot.git
-
-cd leakix-scanner
+cd CyberDepot
+cd cbkb-leakix-scanner
 
 ```
 
@@ -110,5 +110,3 @@ python cbkb-leakix.py -p ApacheStatusPlugin -o results.txt
 ```sh
 
 python  cbkb-leakix.py  -p  GitConfigHttpPlugin  -s  critical  -o  results.txt  -vv
-
-```
