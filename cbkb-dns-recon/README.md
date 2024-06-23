@@ -1,5 +1,5 @@
 
-# cbkb-dns-recon
+# CBKB DNS Recon Script
 
 This project provides a Python script for performing comprehensive DNS reconnaissance, including subdomain enumeration, DNS record retrieval, reverse DNS lookups, and DNS poisoning detection. The script integrates with `Sublist3r` for subdomain enumeration and supports output in CSV, JSON, and TXT formats.
 
