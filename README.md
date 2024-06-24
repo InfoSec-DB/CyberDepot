@@ -33,7 +33,7 @@ Welcome to **CyberDepot**, the ultimate stash for pentesters, hackers, and red t
 -   **🔢 Density Variations**: Choose from three variations of ASCII art density to suit your needs.
 -   **📏 Configurable Width**: Adjust the width of the output ASCII art to fit your desired format.
 
-📖 Get the details on how to use CBKB ASCI by reading the [README.md file](https://github.com/InfoSec-DB/CyberDepot/tree/main/cbkb-asci#readme).
+📖 Get the details on how to use CBKB ASCI by reading the [README.md file](https://github.com/InfoSec-DB/CyberDepot/blob/main/cbkb-ASCI/README.md).
 
 
 ## 📦 Additional Resources
