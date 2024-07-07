@@ -81,7 +81,7 @@ player_x = player_x_start
 player_y = player_y_start
 player_x_change = 0
 player_y_change = 0
-player_speed = 8
+player_speed = 7
 is_powered_up = False
 
 # Invincibility
