@@ -51,7 +51,9 @@ with open(os.devnull, 'w') as fnull:
 
     # Load sounds
     shoot_sound = pygame.mixer.Sound(os.path.join('music', 'guns.wav'))
+    shoot_sound.set_volume(0.1)  # Set shooting sound volume to 10%
     pygame.mixer.music.load(os.path.join('music', 'music.mp3'))
+    pygame.mixer.music.set_volume(0.1)  # Set background music volume to 10%
 
     # Restore stdout and stderr
     sys.stdout = sys.__stdout__
@@ -82,7 +84,19 @@ player_y = player_y_start
 player_x_change = 0
 player_y_change = 0
 player_speed = 7
+player_acceleration = 0.3
+player_deceleration = 0.2
 is_powered_up = False
+
+# Player States
+class PlayerState:
+    IDLE = "idle"
+    MOVING_LEFT = "moving_left"
+    MOVING_RIGHT = "moving_right"
+    MOVING_UP = "moving_up"
+    MOVING_DOWN = "moving_down"
+
+player_state = PlayerState.IDLE
 
 # Invincibility
 invincible = False
@@ -200,7 +214,7 @@ def start_screen():
     screen.blit(splash_screen_img, (0, 0))
 
 def reset_game():
-    global player_x, player_y, player_x_change, player_y_change, enemies, bullets, score_value, lives, last_shot, level, last_enemy_spawn_time, is_powered_up, power_up, power_up_start_time, high_score, trail_particles, coins, invincible, invincible_start_time
+    global player_x, player_y, player_x_change, player_y_change, enemies, bullets, score_value, lives, last_shot, level, last_enemy_spawn_time, is_powered_up, power_up, power_up_start_time, high_score, trail_particles, coins, invincible, invincible_start_time, player_state
     player_x = player_x_start
     player_y = player_y_start
     player_x_change = 0
@@ -219,6 +233,7 @@ def reset_game():
     coins = []
     invincible = False
     invincible_start_time = 0
+    player_state = PlayerState.IDLE
     if score_value > high_score:
         high_score = score_value
 
@@ -381,19 +396,23 @@ while running:
             # Keystroke check for player movement
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
-                    player_x_change = -player_speed
+                    player_state = PlayerState.MOVING_LEFT
                 if event.key == pygame.K_RIGHT:
-                    player_x_change = player_speed
+                    player_state = PlayerState.MOVING_RIGHT
                 if event.key == pygame.K_UP:
-                    player_y_change = -player_speed
+                    player_state = PlayerState.MOVING_UP
                 if event.key == pygame.K_DOWN:
-                    player_y_change = player_speed
+                    player_state = PlayerState.MOVING_DOWN
 
             if event.type == pygame.KEYUP:
-                if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
-                    player_x_change = 0
-                if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
-                    player_y_change = 0
+                if event.key == pygame.K_LEFT and player_state == PlayerState.MOVING_LEFT:
+                    player_state = PlayerState.IDLE
+                if event.key == pygame.K_RIGHT and player_state == PlayerState.MOVING_RIGHT:
+                    player_state = PlayerState.IDLE
+                if event.key == pygame.K_UP and player_state == PlayerState.MOVING_UP:
+                    player_state = PlayerState.IDLE
+                if event.key == pygame.K_DOWN and player_state == PlayerState.MOVING_DOWN:
+                    player_state = PlayerState.IDLE
 
         elif game_state == state_paused:
             if event.type == pygame.KEYDOWN:
@@ -410,7 +429,42 @@ while running:
             fire_bullet(player_x, player_y)
             last_shot = time.time()
 
-        # Player movement
+        # Player movement based on state with acceleration and deceleration
+        if player_state == PlayerState.MOVING_LEFT:
+            player_x_change -= player_acceleration
+            if player_x_change < -player_speed:
+                player_x_change = -player_speed
+        elif player_state == PlayerState.MOVING_RIGHT:
+            player_x_change += player_acceleration
+            if player_x_change > player_speed:
+                player_x_change = player_speed
+        elif player_state == PlayerState.MOVING_UP:
+            player_y_change -= player_acceleration
+            if player_y_change < -player_speed:
+                player_y_change = -player_speed
+        elif player_state == PlayerState.MOVING_DOWN:
+            player_y_change += player_acceleration
+            if player_y_change > player_speed:
+                player_y_change = player_speed
+        else:
+            # Deceleration
+            if player_x_change > 0:
+                player_x_change -= player_deceleration
+                if player_x_change < 0:
+                    player_x_change = 0
+            elif player_x_change < 0:
+                player_x_change += player_deceleration
+                if player_x_change > 0:
+                    player_x_change = 0
+            if player_y_change > 0:
+                player_y_change -= player_deceleration
+                if player_y_change < 0:
+                    player_y_change = 0
+            elif player_y_change < 0:
+                player_y_change += player_deceleration
+                if player_y_change > 0:
+                    player_y_change = 0
+
         player_x += player_x_change
         player_y += player_y_change
 
