@@ -72,7 +72,7 @@ Check out our documented vulnerabilities and CVEs, complete with detailed breakd
 
 - [Multiple SQL Injection Vulnerabilities in Boelter Blue System Management v1.3](https://infosec-db.github.io/CyberDepot/vuln_boelter_blue/)
 
-## Games
+## 🎮 Games
 
 ### CBKB-SpaceInvaders
 
