@@ -87,7 +87,7 @@ is_powered_up = False
 # Invincibility
 invincible = False
 invincible_start_time = 0
-invincible_duration = 5  # seconds
+invincible_duration = 3  # seconds
 
 # Enemy
 enemy_imgs = [os.path.join('img', 'enemy1.png'), os.path.join('img', 'enemy2.png')]
