@@ -9,7 +9,7 @@ Welcome to CBKB-SpaceInvaders, a classic arcade-style game developed in Python u
 1. **Clone the repository:**
 
     `git clone https://github.com/InfoSec-DB/CyberDepot.git`
-       `cd CyberDepot/cbkb-SpaceInvaders`
+    `cd CyberDepot/cbkb-SpaceInvaders`
 
 2. ** Install the required dependencies:**
 
