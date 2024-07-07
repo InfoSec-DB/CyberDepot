@@ -51,9 +51,9 @@ with open(os.devnull, 'w') as fnull:
 
     # Load sounds
     shoot_sound = pygame.mixer.Sound(os.path.join('music', 'guns.wav'))
-    shoot_sound.set_volume(0.1)  # Set shooting sound volume to 10%
+    shoot_sound.set_volume(0.05)  # Set shooting sound volume to 10%
     pygame.mixer.music.load(os.path.join('music', 'music.mp3'))
-    pygame.mixer.music.set_volume(0.1)  # Set background music volume to 10%
+    pygame.mixer.music.set_volume(0.05)  # Set background music volume to 10%
 
     # Restore stdout and stderr
     sys.stdout = sys.__stdout__
