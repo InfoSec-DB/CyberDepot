@@ -18,7 +18,7 @@ nav:
   - Vulnerability Disclosures: 
       - Boelter Blue System Management v1.3: vuln_boelter_blue.md
   - HTB Writeups: 
-      - Starting Point: /htb/startingpoint/htb_mongod.md
+      - Starting Point: /CyberDepot/htb/startingpoint/htb_mongod.md
 
 
 
@@ -45,7 +45,7 @@ theme:
   language: en
   palette:
     - scheme: slate  # Use a dark scheme as the base
-      primary: teal  # Bright red for primary actions and highlights
+      primary: custom  # Bright red for primary actions and highlights
       accent: lime  # Grey for less prominent accents
   dark_mode: true  # Ensure that dark mode is the default
   font:
