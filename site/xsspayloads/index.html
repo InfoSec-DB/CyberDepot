@@ -11,10 +11,6 @@
         <link rel="canonical" href="https://github.com/InfoSec-DB/CyberDepot/xsspayloads/">
       
       
-        <link rel="prev" href="..">
-      
-      
-        <link rel="next" href="../passcrack/">
       
       
       <link rel="icon" href="../img/favicon.ico">
@@ -22,7 +18,7 @@
     
     
       
-        <title>XSS Payloads - CyberDepot - Payload Repository</title>
+        <title>XSS Payload Collection - CyberDepot - Payload Repository</title>
       
     
     
@@ -111,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              XSS Payloads
+              XSS Payload Collection
             
           </span>
         </div>
@@ -261,11 +257,19 @@
       
   
   
-    
   
   
-  
     
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
       
@@ -276,11 +280,13 @@
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -295,7 +301,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Payloads
@@ -306,31 +312,32 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
+    <li class="md-nav__item">
+      <a href="../payloads/index.md" class="md-nav__link">
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
   
   <span class="md-ellipsis">
-    XSS Payloads
+    Explore Payloads
     
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../payloads/xsspayloads.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -340,683 +347,50 @@
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="../payloads/passcrack.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Password Cracking
     
+  </span>
   
+
+      </a>
+    </li>
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
+
+              
+            
+              
+                
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stored-xss-payloads" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stored XSS Payloads
-    </span>
-  </a>
   
-    <nav class="md-nav" aria-label="Stored XSS Payloads">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-payloads" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Payloads
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-payloads" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced Payloads
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#event-handlers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Event Handlers
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#attribute-injection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Attribute Injection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#filter-bypass-payloads" class="md-nav__link">
-    <span class="md-ellipsis">
-      Filter Bypass Payloads
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Filter Bypass Payloads">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-backticks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Backticks
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-data-uris" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Data URIs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#double-encoding" class="md-nav__link">
-    <span class="md-ellipsis">
-      Double Encoding
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#encrypted-payloads" class="md-nav__link">
-    <span class="md-ellipsis">
-      Encrypted Payloads
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Encrypted Payloads">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#base64-encoding-with-execution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Base64 Encoding with Execution
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hex-encoding-with-execution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hex Encoding with Execution
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reflected-xss-payloads" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reflected XSS Payloads
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Reflected XSS Payloads">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-payloads_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Payloads
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#url-encoded-payloads" class="md-nav__link">
-    <span class="md-ellipsis">
-      URL Encoded Payloads
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#event-handlers_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Event Handlers
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#filter-bypass-payloads_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Filter Bypass Payloads
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Filter Bypass Payloads">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-backticks_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Backticks
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-data-uris_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Data URIs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#double-encoding_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Double Encoding
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#encrypted-payloads_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Encrypted Payloads
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Encrypted Payloads">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#base64-encoding-with-execution_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Base64 Encoding with Execution
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hex-encoding-with-execution_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hex Encoding with Execution
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dom-based-xss-payloads" class="md-nav__link">
-    <span class="md-ellipsis">
-      DOM-based XSS Payloads
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="DOM-based XSS Payloads">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-payloads_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Payloads
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-payloads_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced Payloads
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#event-handlers_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Event Handlers
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#filter-bypass-payloads_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Filter Bypass Payloads
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Filter Bypass Payloads">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-backticks_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Backticks
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-data-uris_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Data URIs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#double-encoding_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Double Encoding
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#encrypted-payloads_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Encrypted Payloads
-    </span>
-  </a>
   
-    <nav class="md-nav" aria-label="Encrypted Payloads">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#base64-encoding-with-execution_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Base64 Encoding with Execution
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hex-encoding-with-execution_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hex Encoding with Execution
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-xss-payloads" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced XSS Payloads
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Advanced XSS Payloads">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#polyglot-payloads" class="md-nav__link">
-    <span class="md-ellipsis">
-      Polyglot Payloads
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#filter-bypass-techniques" class="md-nav__link">
-    <span class="md-ellipsis">
-      Filter Bypass Techniques
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Filter Bypass Techniques">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-backticks_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Backticks
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-data-uris_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Data URIs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#double-encoding_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Double Encoding
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#payloads-for-specific-contexts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Payloads for Specific Contexts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Payloads for Specific Contexts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#json-context" class="md-nav__link">
-    <span class="md-ellipsis">
-      JSON Context
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xml-context" class="md-nav__link">
-    <span class="md-ellipsis">
-      XML Context
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#svg-context" class="md-nav__link">
-    <span class="md-ellipsis">
-      SVG Context
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-xss-techniques" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced XSS Techniques
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Advanced XSS Techniques">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exploiting-csp-bypasses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exploiting CSP Bypasses
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Exploiting CSP Bypasses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exploiting-csp-with-jsonp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exploiting CSP with JSONP
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exploiting-csp-with-dom-clobbering" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exploiting CSP with DOM Clobbering
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bypassing-input-sanitization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bypassing Input Sanitization
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bypassing Input Sanitization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#null-byte-injection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Null Byte Injection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breaking-out-of-tags" class="md-nav__link">
-    <span class="md-ellipsis">
-      Breaking Out of Tags
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chained-injection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Chained Injection
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sandbox-escapes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sandbox Escapes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Sandbox Escapes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#bypassing-sandbox-with-postmessage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bypassing Sandbox with PostMessage
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exploiting-trusted-domains" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exploiting Trusted Domains
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-mutation-observers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Mutation Observers
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Using Mutation Observers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-payload" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Payload
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bypassing-html-sanitizers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bypassing HTML Sanitizers
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bypassing HTML Sanitizers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-angle-brackets" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Angle Brackets
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exploiting-weak-sanitizers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exploiting Weak Sanitizers
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
-</li>
+    <li class="md-nav__item">
+      <a href="../payloads/googledorks.md" class="md-nav__link">
         
-      </ul>
-    </nav>
   
-</li>
-      
-    </ul>
+  <span class="md-ellipsis">
+    Google Dorks
+    
+  </span>
   
-</nav>
-      
+
+      </a>
     </li>
   
 
@@ -1035,49 +409,13 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../passcrack/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Password Cracking
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
       
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../googledorks/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    Google Dorks
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
       
-      
-  
-  
-  
-  
-    
     
     
       
@@ -1094,10 +432,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1109,8 +447,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Reconnaissance
           </label>
@@ -1123,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../shodan/" class="md-nav__link">
+      <a href="../reconnaissance/shodan.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1145,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nmap/" class="md-nav__link">
+      <a href="../reconnaissance/nmap.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1175,6 +513,14 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
     
       
         
@@ -1190,10 +536,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1205,8 +551,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Authentication Bypass
           </label>
@@ -1219,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../otpbypass/" class="md-nav__link">
+      <a href="../auth_bypass/otpbypass.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1241,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../passresetpoison/" class="md-nav__link">
+      <a href="../auth_bypass/passresetpoison.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1263,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2fabypasscsrf/" class="md-nav__link">
+      <a href="../auth_bypass/2fabypasscsrf.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1293,6 +639,10 @@
   
     
     
+      
+        
+      
+    
     
       
         
@@ -1308,10 +658,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1323,8 +673,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Vulnerability Disclosures
           </label>
@@ -1337,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vuln_boelter_blue/" class="md-nav__link">
+      <a href="../vuln_disclosures/vuln_boelter_blue.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1367,6 +717,10 @@
   
     
     
+      
+        
+      
+    
     
       
         
@@ -1382,10 +736,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1397,8 +751,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             HTB Writeups
           </label>
@@ -1411,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../htb_mongod/" class="md-nav__link">
+      <a href="../htb/mongod.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1647,7 +1001,7 @@ document.body.appendChild(document.createElement('div'));</code> </p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      &copy; 2023 <a href="https://github.com/InfoSec-DB/" target="_blank" rel="noopener">InfoSec-DB</a>
+      &copy; 2025 <a href="https://github.com/InfoSec-DB/" target="_blank" rel="noopener">InfoSec-DB</a>
 
     </div>
   
@@ -1708,7 +1062,7 @@ document.body.appendChild(document.createElement('div'));</code> </p>
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.prune", "toc.follow", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.prune", "navigation.indexes", "toc.follow", "header.autohide"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>

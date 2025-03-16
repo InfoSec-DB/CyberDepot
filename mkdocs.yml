@@ -5,21 +5,56 @@ repo_url: https://github.com/InfoSec-DB/CyberDepot
 nav:
   - CyberDepot: index.md
   - Payloads:
-      - "Explore Payloads": payloads/index.md
-      - "XSS Payloads": payloads/xsspayloads.md
-      - "Password Cracking": payloads/passcrack.md
-      - "Google Dorks": payloads/googledorks.md
+      - "Overview": payloads/index.md
+      - "Web Exploits":
+          - "XSS Attacks": payloads/web_exploits/xss.md
+          - "SQL Injection": payloads/web_exploits/sql_injection.md
+          - "CSRF Exploits": payloads/web_exploits/csrf.md
+      - "Credential Attacks":
+          - "Password Cracking": payloads/credential_attacks/password_cracking.md
+          - "Credential Stuffing": payloads/credential_attacks/credential_stuffing.md
+      - "Network Exploits":
+          - "Botnets": payloads/network_exploits/botnets.md
+          - "Reverse Shells": payloads/network_exploits/reverse_shells.md
+      - "Search Engine Hacking":
+          - "Google Dorks": payloads/search_engine_hacking/google_dorks.md
   - Reconnaissance:
-      - "Shodan Guides": reconnaissance/shodan.md
-      - "Nmap Cheat Sheet": reconnaissance/nmap.md
+      - "Overview": reconnaissance/index.md
+      - "Tools":
+          - "Shodan": reconnaissance/tools/shodan.md
+          - "Nmap": reconnaissance/tools/nmap.md
+      - "Cheatsheets":
+          - "Shodan Cheatsheet": reconnaissance/cheatsheets/shodan_cheatsheet.md
   - Authentication Bypass:
-      - "OTP Bypass Techniques": auth_bypass/otpbypass.md
-      - "Password Reset Poisoning": auth_bypass/passresetpoison.md
-      - "2FA Bypass via CSRF": auth_bypass/2fabypasscsrf.md
+      - "Overview": auth_bypass/index.md
+      - "OTP Bypass Techniques": auth_bypass/otp_bypass.md
+      - "Password Reset Poisoning": auth_bypass/password_reset_poisoning.md
+      - "2FA Bypass via CSRF": auth_bypass/2fa_bypass_via_csrf.md
   - Vulnerability Disclosures:
+      - "Overview": vuln_disclosures/index.md
       - "Boelter Blue System Management v1.3": vuln_disclosures/vuln_boelter_blue.md
+  - WiFi Hacking:
+      - "Overview": wifi_hacking/index.md
+      - "WiFi Exploits": wifi_hacking/wifi_exploits.md
   - HTB Writeups:
-      - "MonGod": htb/mongod.md
+      - "Overview": htb/index.md
+      - "Starting Point":
+          - "Overview": htb/starting_point/index.md
+          - "Machines":
+              - htb/starting_point/machine1.md
+              - htb/starting_point/machine2.md
+              - htb/starting_point/machine3.md
+      - "Retired Machines":
+          - "Overview": htb/retired_machines/index.md
+          - "Machines":
+              - htb/retired_machines/retired1.md
+              - htb/retired_machines/retired2.md
+              - htb/retired_machines/retired3.md
+
+
+
+
+
 
 theme:
   name: material
@@ -33,23 +68,23 @@ theme:
     - content.code.copy
     - navigation.instant
     - navigation.instant.progress
-    - navigation.sections  # Enables collapsible categories
-    - navigation.expand  # Keeps top categories visible
+    - navigation.sections
+    - navigation.expand
     - navigation.prune
-    - navigation.indexes  # Ensures category names are clickable
     - toc.follow
+    - navigation.top
     - header.autohide
   language: en
   palette:
-    - scheme: slate  # Dark mode
-      primary: custom  # Bright red for highlights
-      accent: grey  # Subtle contrast
-  dark_mode: true
+    - scheme: slate  # Use a dark scheme as the base
+      primary: custom  # Bright red for primary actions and highlights
+      accent: grey  # Grey for less prominent accents
+  dark_mode: true  # Ensure that dark mode is the default
   font:
-    text: "Roboto Mono"
-    code: "Fira Code"
-  logo: "img/logo.svg"
-  favicon: "img/favicon.ico"
+    text: "Roboto Mono"  # Monospaced font for that code-like feel
+    code: "Fira Code"  # Excellent for showing code snippets with ligatures
+  logo: "img/logo.svg"  # Custom logo for branding
+  favicon: "img/favicon.ico"  # Custom favicon
   icon:
     repo: fontawesome/brands/github-alt
   titles_only: true
@@ -60,10 +95,10 @@ plugins:
   - search
 
 extra_css:
-  - css/custom.css  # Custom styles
+  - css/custom.css  # Additional styles for customization
 
 extra_javascript:
-  - js/custom.js  # Custom scripts
+  - js/custom.js  # For any special interactive elements or fixes
 
 extra:
   social:
@@ -95,4 +130,4 @@ markdown_extensions:
           - overrides/.icons
 
 copyright: |
-  &copy; 2025 <a href="https://github.com/InfoSec-DB/" target="_blank" rel="noopener">InfoSec-DB</a>
+  &copy; 2023 <a href="https://github.com/InfoSec-DB/" target="_blank" rel="noopener">InfoSec-DB</a>
