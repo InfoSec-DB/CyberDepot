@@ -17,3 +17,5 @@
 /.vs/CyberDepot
 /.vs
 *.vsidx
+*.sqlite
+*.vsidx
