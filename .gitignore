@@ -16,3 +16,4 @@ xp system tortuga.txt
 *.sqlite
 *.sqlite
 *.sqlite
+.vs/slnx.sqlite
