@@ -18,7 +18,7 @@ nav:
   - Vulnerability Disclosures: 
       - Boelter Blue System Management v1.3: vuln_boelter_blue.md
   - HTB Writeups: 
-      - Starting Point: /CyberDepot/htb/startingpoint/htb_mongod.md
+      - Starting Point: htb_mongod.md
 
 
 
