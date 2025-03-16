@@ -162,3 +162,4 @@ cython_debug/
 *.vsidx
 .vs/slnx.sqlite
 *.sqlite-journal
+*.sqlite
