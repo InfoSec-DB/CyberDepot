@@ -6,11 +6,8 @@ nav:
   - CyberDepot: index.md
   - Payloads:
       - XSS Payloads: xsspayloads.md
-  - Reverse Shells:
-  - WiFi Hacking:
-  - Password Cracking:
+  - Password Cracking: passcrack.md
   - Google Dorks: googledorks.md
-  - Botnets:
   - Reconnaissance:
       - Shodan Guides: shodan.md
       - Nmap Cheat Sheet: nmap.md
@@ -21,7 +18,7 @@ nav:
   - Vulnerability Disclosures: 
       - Boelter Blue System Management v1.3: vuln_boelter_blue.md
   - HTB Writeups: 
-      - Starting Point: 
+      - Starting Point: /htb/startingpoint/htb_mongod.md
 
 
 
