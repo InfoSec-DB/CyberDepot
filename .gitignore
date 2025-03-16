@@ -12,3 +12,4 @@
 CyberDepot.txt
 xp system tortuga.txt
 *.vsidx
+*.sqlite-journal
