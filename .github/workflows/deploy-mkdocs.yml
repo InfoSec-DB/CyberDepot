@@ -1,0 +1,30 @@
+name: Deploy MkDocs Site
+
+on:
+  push:
+    branches:
+      - master  # Deploy when changes are pushed to the master branch
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Uses the latest Python 3 version
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material
+          pip install pymdown-extensions
+          pip install mkdocs-material-extensions
+
+      - name: Deploy MkDocs site
+        run: mkdocs gh-deploy --force
