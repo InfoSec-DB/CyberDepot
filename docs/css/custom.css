@@ -146,38 +146,3 @@ footer {
 
 
 
-/* 🔹 Ensure sidebar categories are closed by default */
-.md-nav__list {
-    display: none; /* Hide submenus by default */
-}
-
-/* 🔹 Expand only the active section */
-.md-nav__item--active > .md-nav__list {
-    display: block;
-}
-
-/* 🔹 Style the menu links */
-.md-nav__item {
-    border-left: 3px solid transparent; /* Default state */
-}
-
-.md-nav__item--active {
-    border-left: 3px solid #74ff51; /* Highlight active section */
-}
-
-/* 🔹 Make sidebar categories stand out */
-.md-nav__title {
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #ffffff;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-/* 🔹 Hover Effect */
-.md-nav__link:hover {
-    background-color: #2a2d38;
-    color: #74ff51;
-    border-left: 4px solid #74ff51;
-}
