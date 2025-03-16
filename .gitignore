@@ -170,3 +170,4 @@ cython_debug/
 /.vs
 /.vs
 *.sqlite
+.vs/slnx.sqlite
