@@ -18,7 +18,6 @@ nav:
   - Vulnerability Disclosures: 
       - Boelter Blue System Management v1.3: vuln_boelter_blue.md
   - HTB Writeups: 
-      - Starting Point: 
       - MonGod: htb_mongod.md
 
 
