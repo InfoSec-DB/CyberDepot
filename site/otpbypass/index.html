@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://github.com/InfoSec-DB/CyberDepot/googledorks/">
+        <link rel="canonical" href="https://github.com/InfoSec-DB/CyberDepot/otpbypass/">
       
       
-        <link rel="prev" href="../passcrack/">
+        <link rel="prev" href="../nmap/">
       
       
-        <link rel="next" href="../shodan/">
+        <link rel="next" href="../passresetpoison/">
       
       
       <link rel="icon" href="../img/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Google Dorks - CyberDepot - Payload Repository</title>
+        <title>OTP Bypass Techniques - CyberDepot - Payload Repository</title>
       
     
     
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#otp-bypass-on-account-registration-via-response-manipulation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Google Dorks
+              OTP Bypass Techniques
             
           </span>
         </div>
@@ -351,17 +356,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../googledorks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -371,7 +369,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -476,8 +473,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -489,13 +488,11 @@
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -510,7 +507,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Authentication Bypass
@@ -521,10 +518,29 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../otpbypass/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    OTP Bypass Techniques
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -534,6 +550,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#otp-bypass-on-account-registration-via-response-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      OTP Bypass on Account Registration via Response Manipulation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OTP Bypass on Account Registration via Response Manipulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-1-response-manipulation-during-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Response Manipulation During Registration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-response-manipulation-during-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: Response Manipulation During Login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-3-intercept-and-modify-response-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 3: Intercept and Modify Response Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-4-bypass-otp-in-registration-forms-using-repeater" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 4: Bypass OTP in Registration Forms Using Repeater
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-5-no-rate-limiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 5: No Rate Limiting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-test-cases-for-bypassing-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Test Cases for Bypassing OTP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -757,9 +869,172 @@
   
 
 
-  <h1>Google Dorks</h1>
+  <h1>OTP Bypass Techniques</h1>
 
-<p>wqd</p>
+<h2 id="otp-bypass-on-account-registration-via-response-manipulation">OTP Bypass on Account Registration via Response Manipulation</h2>
+<h3 id="overview">Overview</h3>
+<p>This article demonstrates several methods to bypass OTP (One-Time Password) verification during account registration or login processes using BurpSuite. These techniques can potentially lead to unauthorized access to user accounts, resulting in account takeover. This guide is intended for educational purposes to help you understand common vulnerabilities and improve your skills in penetration testing.</p>
+<h3 id="method-1-response-manipulation-during-registration">Method 1: Response Manipulation During Registration</h3>
+<ol>
+<li><strong>Register an Account</strong>:<ul>
+<li>Register an account with a mobile number and request an OTP.</li>
+</ul>
+</li>
+<li><strong>Capture the Request</strong>:<ul>
+<li>Enter an incorrect OTP and capture the request in BurpSuite.</li>
+</ul>
+</li>
+<li>
+<p><strong>Intercept the Response</strong>:</p>
+<ul>
+<li>In BurpSuite, go to the "Proxy" tab and intercept the response to the OTP verification request.</li>
+<li>The response will look like:</li>
+</ul>
+<p><code>{"verificationStatus":false,"mobile":"9072346577","profileId":"84673832"}</code> </p>
+</li>
+<li>
+<p><strong>Modify the Response</strong>:</p>
+<ul>
+<li>Change the response to:</li>
+</ul>
+<p><code>{"verificationStatus":true,"mobile":"9072346577","profileId":"84673832"}</code> </p>
+<ul>
+<li>In BurpSuite, edit the intercepted response directly in the "HTTP history" tab.</li>
+<li><strong>Forward the Response</strong>:</li>
+<li>Forward the modified response by clicking on the "Forward" button.</li>
+<li><strong>Outcome</strong>:</li>
+<li>You will be logged into the account.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Impact</strong>: Account Takeover</p>
+<h3 id="method-2-response-manipulation-during-login">Method 2: Response Manipulation During Login</h3>
+<ol>
+<li><strong>Initiate Login</strong>:<ul>
+<li>Go to the login page and request an OTP.</li>
+</ul>
+</li>
+<li><strong>Capture the Request</strong>:<ul>
+<li>Enter an incorrect OTP and capture the request in BurpSuite.</li>
+</ul>
+</li>
+<li><strong>Intercept the Response</strong>:<ul>
+<li>In BurpSuite, intercept the response to the OTP verification request.</li>
+<li>The response will indicate an error (e.g., incorrect OTP).</li>
+</ul>
+</li>
+<li><strong>Modify the Response</strong>:<ul>
+<li>Change the response to indicate success (e.g., replace <code>{"status":"error"}</code> with <code>{"status":"success"}</code>).</li>
+</ul>
+</li>
+<li><strong>Forward the Response</strong>:<ul>
+<li>Forward the modified response by clicking on the "Forward" button.</li>
+</ul>
+</li>
+<li><strong>Outcome</strong>:<ul>
+<li>You will be logged into the account.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Impact</strong>: Account Takeover</p>
+<h3 id="method-3-intercept-and-modify-response-status">Method 3: Intercept and Modify Response Status</h3>
+<ol>
+<li><strong>Register Two Accounts</strong>:<ul>
+<li>Register two accounts with any two mobile numbers, entering the correct OTP initially.</li>
+</ul>
+</li>
+<li><strong>Capture the Request</strong>:<ul>
+<li>Intercept your request in BurpSuite.</li>
+</ul>
+</li>
+<li><strong>Intercept the Response</strong>:<ul>
+<li>Click on "Action" -&gt; "Do intercept" -&gt; "Intercept response to this request".</li>
+</ul>
+</li>
+<li><strong>Check the Response</strong>:<ul>
+<li>Check the response message for a status, e.g., <code>status:1</code>.</li>
+</ul>
+</li>
+<li><strong>Repeat with Incorrect OTP</strong>:<ul>
+<li>Follow the same procedure with the other account but enter an incorrect OTP this time.</li>
+</ul>
+</li>
+<li><strong>Capture and Modify</strong>:<ul>
+<li>Intercept the response to the request and note the message status, e.g., <code>status:0</code>.</li>
+<li>Change the status to <code>status:1</code>.</li>
+</ul>
+</li>
+<li><strong>Forward the Response</strong>:<ul>
+<li>Forward the modified response by clicking on the "Forward" button.</li>
+</ul>
+</li>
+<li><strong>Outcome</strong>:<ul>
+<li>If you are logged in, you have successfully bypassed authentication.</li>
+</ul>
+</li>
+</ol>
+<h3 id="method-4-bypass-otp-in-registration-forms-using-repeater">Method 4: Bypass OTP in Registration Forms Using Repeater</h3>
+<ol>
+<li><strong>Create an Account</strong>:<ul>
+<li>Create an account with a non-existent phone number.</li>
+</ul>
+</li>
+<li><strong>Intercept the Request</strong>:<ul>
+<li>Intercept the request in BurpSuite.</li>
+</ul>
+</li>
+<li><strong>Use Repeater</strong>:<ul>
+<li>Send the request to the repeater by right-clicking on the request and selecting "Send to Repeater".</li>
+</ul>
+</li>
+<li><strong>Modify the Phone Number</strong>:<ul>
+<li>Go to the Repeater tab and change the non-existent phone number to your phone number.</li>
+</ul>
+</li>
+<li><strong>Use Received OTP</strong>:<ul>
+<li>If you receive an OTP on your phone, use that OTP to register the non-existent number.</li>
+</ul>
+</li>
+</ol>
+<h3 id="method-5-no-rate-limiting">Method 5: No Rate Limiting</h3>
+<ol>
+<li><strong>Create an Account</strong>:<ul>
+<li>Create an account.</li>
+</ul>
+</li>
+<li><strong>Capture the Request</strong>:<ul>
+<li>When the application asks for the OTP, enter an incorrect OTP and capture the request in BurpSuite.</li>
+</ul>
+</li>
+<li><strong>Use Repeater</strong>:<ul>
+<li>Send this request to the Repeater by right-clicking on the request and selecting "Send to Repeater".</li>
+</ul>
+</li>
+<li><strong>Check for Rate Limiting</strong>:<ul>
+<li>Set up a payload on the OTP value and repeat the request.</li>
+<li>If there is no rate limit, wait for a 200 OK or 302 Found status code.</li>
+</ul>
+</li>
+<li><strong>Outcome</strong>:<ul>
+<li>If you receive a 200 OK or 302 Found status code, you have bypassed the OTP.</li>
+</ul>
+</li>
+</ol>
+<h3 id="additional-test-cases-for-bypassing-otp">Additional Test Cases for Bypassing OTP</h3>
+<ol>
+<li><strong>Default OTPs</strong>:<ul>
+<li>Test common default OTPs like <code>111111</code>, <code>123456</code>, <code>000000</code>.</li>
+</ul>
+</li>
+<li><strong>Leaked OTP in Response</strong>:<ul>
+<li>Capture the request in BurpSuite and check the response for any leaked OTP.</li>
+</ul>
+</li>
+<li><strong>Old OTP Validity</strong>:<ul>
+<li>Check if an old OTP is still valid by attempting to reuse it.</li>
+</ul>
+</li>
+</ol>
 
 
 
