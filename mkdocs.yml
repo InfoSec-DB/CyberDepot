@@ -45,8 +45,8 @@ theme:
   language: en
   palette:
     - scheme: slate  # Use a dark scheme as the base
-      primary: custom  # Bright red for primary actions and highlights
-      accent: grey  # Grey for less prominent accents
+      primary: teal  # Bright red for primary actions and highlights
+      accent: lime  # Grey for less prominent accents
   dark_mode: true  # Ensure that dark mode is the default
   font:
     text: "Roboto Mono"  # Monospaced font for that code-like feel
