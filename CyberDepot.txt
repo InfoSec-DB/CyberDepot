@@ -1,0 +1,11 @@
+pip install mkdocs-material
+pip install pymdown-extensions
+pip install mkdocs-material-extensions
+
+Login to infosec-db github, Clone it. switch to master.
+cd "D:\Github\CyberDepot"
+mkdocs serve
+
+
+To Deploy / Push Live:
+mkdocs gh-deploy

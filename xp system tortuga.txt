@@ -1,0 +1,51 @@
+Why These Steps?
+MySQL requires exactly one auto-increment column, and it must be a key (usually the primary key).
+If uid is auto-increment + PK, you cannot just DROP PRIMARY KEY; because MySQL won’t allow dropping the only primary key that’s also auto-increment.
+By first removing auto-increment from uid, MySQL no longer enforces that uid must remain a key. Then you can drop the PK.
+Finally, you add a new column id with auto-increment and make it the primary key.
+Using uid for Your “City ID”
+With this done, you can:
+
+Assign a uid manually or via your Lua script (e.g., SELECT MAX(uid)+1) to keep the same “City ID” for a given license.
+Allow multiple rows with the same uid but different citizenid for multi-character setups.
+Keep referencing uid in your scripts for the “City ID,” while the DB uses id purely for uniqueness.
+
+
+Final Table Structure
+After these steps, your players_uid table will look something like:
+
+Field	Type	Null	Key	Default	Extra
+id	int(11)	NO	PRI	NULL	auto_increment
+uid	int(11)	NO		0	
+name	varchar(60)	NO		NULL	
+steam	varchar(60)	NO		NULL	
+citizenid	varchar(60)	YES		NULL	
+xp_streetrep	int(11)	NO		0	
+xp_jobrep	int(11)	NO		0	
+xp_weed	int(11)	NO		0	
+xp_xtc	int(11)	NO		0	
+xp_coke	int(11)	NO		0	
+xp_heroin	int(11)	NO		0	
+xp_meth	int(11)	NO		0	
+is_admin	tinyint(1)	YES		0	
+id is the actual auto-increment primary key for the table.
+uid is now a normal integer column that can be reused for multi-character logic. You can have multiple rows with the same uid but different citizenid, or vice versa.
+
+
+
+Step 1: Remove Auto-Increment from uid
+ALTER TABLE `players_uid`
+  MODIFY COLUMN `uid` INT(11) NOT NULL;
+
+
+Step 2: Drop the Primary Key on uid
+ALTER TABLE `players_uid`
+  DROP PRIMARY KEY;
+
+
+Step 3: Add a New id Column as Auto-Increment Primary Key
+ALTER TABLE `players_uid`
+  ADD COLUMN `id` INT(11) NOT NULL AUTO_INCREMENT FIRST,
+  ADD PRIMARY KEY (`id`);
+
+
