@@ -41,7 +41,7 @@ nav:
       - "Starting Point":
           - "Overview": htb/starting_point/index.md
           - "Machines":
-              - htb/starting_point/machine1.md
+              - htb/starting_point/htb_mongod.md
       - "Retired Machines":
           - "Overview": htb/retired_machines/index.md
           - "Machines":
