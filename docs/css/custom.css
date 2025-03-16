@@ -146,51 +146,38 @@ footer {
 
 
 
-/* Hide all subcategories */
+/* 🔹 Ensure sidebar categories are closed by default */
 .md-nav__list {
-    display: none;
+    display: none; /* Hide submenus by default */
 }
 
-/* Show only main categories */
-.md-nav__item--nested > .md-nav__list {
-    display: none;
-}
-
-/* Ensure only active page expands */
+/* 🔹 Expand only the active section */
 .md-nav__item--active > .md-nav__list {
     display: block;
 }
 
-/* Remove unwanted arrows */
-.md-nav__item--nested > .md-nav__link::after {
-    display: none;
+/* 🔹 Style the menu links */
+.md-nav__item {
+    border-left: 3px solid transparent; /* Default state */
 }
 
-/* Improve Sidebar Spacing */
-.md-sidebar--primary {
-    background-color: #1b1f27;
-    padding-top: 15px;
+.md-nav__item--active {
+    border-left: 3px solid #74ff51; /* Highlight active section */
 }
 
-/* Main category styling */
+/* 🔹 Make sidebar categories stand out */
 .md-nav__title {
     font-size: 16px;
     font-weight: bold;
-    color: #ffffff;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    color: #ffffff;
     padding: 10px 15px;
     cursor: pointer;
 }
 
-    .md-nav__title:hover {
-        color: #74ff51;
-    }
-
-/* Active section stands out */
-.md-nav__link--active {
+/* 🔹 Hover Effect */
+.md-nav__link:hover {
+    background-color: #2a2d38;
     color: #74ff51;
-    font-weight: bold;
     border-left: 4px solid #74ff51;
-    background-color: rgba(0, 188, 212, 0.1);
 }
