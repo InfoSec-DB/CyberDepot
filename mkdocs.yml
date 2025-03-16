@@ -55,15 +55,19 @@ nav:
 theme:
   name: material
   features:
-    - navigation.tabs  # Only top-level categories show up first
-    - navigation.indexes  # Ensures main categories are clickable
-    - navigation.prune  # Removes empty categories
+    - navigation.sections  # Enables collapsible sidebar categories
+    - navigation.prune  # Hides empty or invalid navigation items
+    - navigation.indexes  # Makes category headers clickable if they have an index.md
     - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
     - navigation.instant
     - navigation.instant.progress
     - toc.follow
-    - search.suggest
-    - search.highlight
     - header.autohide
   language: en
   palette:
