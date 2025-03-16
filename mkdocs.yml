@@ -5,13 +5,12 @@ repo_url: https://github.com/InfoSec-DB/CyberDepot
 nav:
   - CyberDepot: index.md
   - Payloads:
-      - Overview: payloads.md
       - XSS Payloads: xsspayloads.md
-  - Reverse Shells: revshells.md
-  - WiFi Hacking: wifi.md
-  - Password Cracking: passcrack.md
+  - Reverse Shells:
+  - WiFi Hacking:
+  - Password Cracking:
   - Google Dorks: googledorks.md
-  - Botnets: botnets.md
+  - Botnets:
   - Reconnaissance:
       - Shodan Guides: shodan.md
       - Nmap Cheat Sheet: nmap.md
@@ -21,6 +20,9 @@ nav:
       - 2FA Bypass via CSRF: 2fabypasscsrf.md
   - Vulnerability Disclosures: 
       - Boelter Blue System Management v1.3: vuln_boelter_blue.md
+  - HTB Writeups: 
+      - Starting Point: /htb/startingpoint/htb_mongod.md
+
 
 
 
