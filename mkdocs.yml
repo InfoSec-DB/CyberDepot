@@ -62,11 +62,8 @@ theme:
     - content.code.copy
     - navigation.instant
     - navigation.instant.progress
-    - navigation.sections
-    - navigation.expand
     - navigation.prune
     - toc.follow
-    - navigation.top
     - header.autohide
   language: en
   palette:
