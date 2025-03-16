@@ -166,3 +166,4 @@ cython_debug/
 /.vs
 *.sqlite
 *.sqlite
+*.sqlite
