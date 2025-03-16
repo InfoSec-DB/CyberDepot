@@ -1,106 +1,183 @@
-﻿/* Overall background and text color adjustments */
+﻿/* 🌙 Overall Background & Text Styling */
 body {
-  background-color: #1e2129;
-  color: #cfcfcf;
-  font-size: 12px; /* General font size for the body */
+    background-color: #1b1f27; /* Darker background for a smoother UI */
+    color: #cfcfcf;
+    font-size: 14px; /* More readable font size */
+    font-family: "Roboto", sans-serif;
 }
 
+/* 🎨 Primary Theme Colors */
 :root {
-  --md-primary-fg-color: #841f36;          /* Standard primary color */
-  --md-primary-fg-color--light: #c04e65;   /* Lighter shade for hover states, etc. */
-  --md-primary-fg-color--dark: #5f1324;    /* Darker shade for active states, etc. */
+    --md-primary-fg-color: #841f36; /* Dark red primary */
+    --md-primary-fg-color--light: #c04e65; /* Lighter red for hover states */
+    --md-primary-fg-color--dark: #5f1324; /* Darker red for active states */
 }
 
-/* Navbar Styling */
+/* 🏗️ Navbar Improvements */
 .md-header-nav {
-  background-color: #1e2129; /* Semi-transparent black */
-  border-bottom: 1px solid #00bcd4; /* Neon cyan border */
-  height: 25px;
-  font-size: 16px; /* Adjusted font size for navbar */
+    background-color: #1b1f27; /* Matches the overall theme */
+    border-bottom: 2px solid #00bcd4; /* Thicker neon cyan border */
+    height: 50px;
+    font-size: 16px;
 }
 
 .md-header-nav__title {
-  color: #00bcd4; /* Cyan text */
+    color: #00bcd4;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Sidebar Navigation Link Styling */
+/* 📂 Sidebar Navigation - Normal Links */
 .md-sidebar--primary .md-nav__link {
-  color: #00bcd4; /* Blue for normal sidebar links */
-  padding-left: 16px; /* Adds padding to move text away from the sidebar edge */
-  font-size: 14px; /* Further reduced sidebar link font size */
+    color: #00bcd4;
+    padding: 12px 18px; /* Adds spacing for better readability */
+    font-size: 15px;
+    transition: all 0.3s ease;
 }
 
-.md-sidebar--primary .md-nav__link:hover {
-  background-color: #272a35; /* Dark background on hover for sidebar links */
-  color: #74ff51; /* Brighter shade for hover */
-}
+    /* 🔥 Sidebar Hover Effect */
+    .md-sidebar--primary .md-nav__link:hover {
+        background-color: #2a2d38; /* Darker hover background */
+        color: #74ff51;
+        border-left: 4px solid #74ff51; /* Subtle highlight */
+    }
 
+/* ✅ Active Section in Sidebar */
 .md-sidebar--primary .md-nav__link--active {
-  color: #74ff51; /* Keeping active sidebar links neon green for visibility */
-  border-left: 3px solid #74ff51; /* Green border to indicate active section */
-  padding-left: 13px; /* Adjust padding to account for the border thickness */
+    color: #74ff51;
+    font-weight: bold;
+    border-left: 5px solid #74ff51; /* Stronger left highlight */
+    background-color: rgba(0, 188, 212, 0.1);
 }
 
-/* Main Content Specific Styling */
+/* 📌 Sidebar Section Headers */
+.md-nav__title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 10px 15px;
+}
+
+/* 🔹 Breadcrumb Navigation */
+.md-header-nav__breadcrumb {
+    font-size: 13px;
+    color: #00bcd4;
+    text-transform: uppercase;
+}
+
+/* 📑 Main Content Styling */
 .md-grid, .md-typeset {
-  font-size: 14px; /* Setting font size for the main content */
+    font-size: 15px;
+    line-height: 1.6; /* Improves readability */
 }
 
-/* Content Header Font Sizes */
-.md-typeset h1 {
-  font-size: 22px; /* Reduced size for main headers */
+    /* 📝 Header Styling */
+    .md-typeset h1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #74ff51; /* Bright green for emphasis */
+    }
+
+    .md-typeset h2 {
+        font-size: 20px;
+        color: #00bcd4;
+    }
+
+    .md-typeset h3 {
+        font-size: 18px;
+        color: #c04e65;
+    }
+
+    /* 🖥️ Code Block Styling */
+    .md-typeset pre {
+        background: linear-gradient(to right, #1c1f26 0%, #23272e 100%);
+        border: 1px solid #00bcd4;
+        box-shadow: 0 0 12px rgba(0, 188, 212, 0.4);
+        padding: 12px;
+        border-radius: 6px;
+        overflow-x: auto;
+    }
+
+        .md-typeset pre code {
+            color: #8abeb7;
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+        }
+
+/* 🎯 Sidebar Scroll Improvements */
+.md-sidebar {
+    scrollbar-width: thin;
+    scrollbar-color: #00bcd4 #1b1f27;
 }
 
-.md-typeset h2 {
-  font-size: 18px; /* Reduced size for secondary headers */
-}
+    .md-sidebar::-webkit-scrollbar {
+        width: 8px;
+    }
 
-.md-typeset h3 {
-  font-size: 16px; /* Reduced size for tertiary headers */
-}
+    .md-sidebar::-webkit-scrollbar-track {
+        background: #1b1f27;
+    }
 
-.md-typeset h4, .md-typeset h5, .md-typeset h6 {
-  font-size: 14px; /* Small headers get smaller font size */
-}
+    .md-sidebar::-webkit-scrollbar-thumb {
+        background: #00bcd4;
+        border-radius: 6px;
+    }
 
-/* Enhanced Code Blocks Styling */
-.md-typeset pre {
-  background: linear-gradient(to right, #242830 0%, #292d3e 100%); /* Gradient background */
-  border: 1px solid #00bcd4; /* Neon cyan border */
-  box-shadow: 0 0 8px rgba(0, 188, 212, 0.3); /* Soft glow effect */
-  padding: 10px; /* Added padding for a better layout */
-  border-radius: 4px; /* Rounded corners */
-  overflow-x: auto; /* Handles horizontal overflow by adding a scrollbar */
-}
-
-.md-typeset pre code {
-  background: transparent; /* Ensure code inside pre does not have its own background */
-  border: none; /* Remove border from code elements */
-  box-shadow: none; /* Remove any shadow from code elements */
-  padding: 0; /* Remove padding inside code elements to prevent misalignment */
-  color: #8abeb7; /* Soft cyan text for better visibility */
-  font-family: 'Fira Code', monospace; /* Ensuring a monospace font for code */
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3); /* Subtle text shadow for depth */
-  font-size: 11px; /* Smaller font size for code to fit more content */
-}
-
-/* Footer Styling */
+/* 📌 Footer Styling */
 footer {
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-size: 12px; /* Ensuring footer text matches body font size */
+    background-color: #1b1f27;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
 }
 
-/* Visited Link Styling */
-.md-sidebar--primary .md-nav__link:visited,
-.md-header-nav__title:visited {
-  color: #00bcd4; /* Change visited links color to blue */
+/* 🔗 Link Styling */
+.md-sidebar--primary .md-nav__link:visited {
+    color: #00bcd4;
 }
 
-/* Not Visited Link Styling */
-.md-sidebar--primary .md-nav__link:not(:visited),
-.md-header-nav__title:not(:visited) {
-  color: #74ff51; /* Blue for not visited links */
+.md-sidebar--primary .md-nav__link:not(:visited) {
+    color: #74ff51;
+}
+
+
+
+/* 🔹 Ensure sidebar categories are closed by default */
+.md-nav__list {
+    display: none; /* Hide submenus by default */
+}
+
+/* 🔹 Expand only the active section */
+.md-nav__item--active > .md-nav__list {
+    display: block;
+}
+
+/* 🔹 Style the menu links */
+.md-nav__item {
+    border-left: 3px solid transparent; /* Default state */
+}
+
+.md-nav__item--active {
+    border-left: 3px solid #74ff51; /* Highlight active section */
+}
+
+/* 🔹 Make sidebar categories stand out */
+.md-nav__title {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* 🔹 Hover Effect */
+.md-nav__link:hover {
+    background-color: #2a2d38;
+    color: #74ff51;
+    border-left: 4px solid #74ff51;
 }
