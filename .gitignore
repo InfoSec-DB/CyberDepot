@@ -163,3 +163,4 @@ cython_debug/
 .vs/slnx.sqlite
 *.sqlite-journal
 *.sqlite
+/.vs
