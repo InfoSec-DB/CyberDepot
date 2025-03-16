@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://github.com/InfoSec-DB/CyberDepot/payloads/">
+        <link rel="canonical" href="https://github.com/InfoSec-DB/CyberDepot/auth_bypass/password_reset_poisoning/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../otp_bypass/">
       
       
-        <link rel="next" href="web_exploits/xss/">
+        <link rel="next" href="../2fa_bypass_via_csrf/">
       
       
-      <link rel="icon" href="../img/favicon.ico">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
     
     
       
-        <title>Overview - CyberDepot - Payload Repository</title>
+        <title>Password Reset Poisoning - CyberDepot - Payload Repository</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#password-reset-poisoning-intercepting-and-manipulating-email-links" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -87,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="CyberDepot - Payload Repository" class="md-header__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
+    <a href="../.." title="CyberDepot - Payload Repository" class="md-header__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
       
-  <img src="../img/logo.svg" alt="logo">
+  <img src="../../img/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Password Reset Poisoning
             
           </span>
         </div>
@@ -209,9 +214,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="CyberDepot - Payload Repository" class="md-nav__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
+    <a href="../.." title="CyberDepot - Payload Repository" class="md-nav__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
       
-  <img src="../img/logo.svg" alt="logo">
+  <img src="../../img/logo.svg" alt="logo">
 
     </a>
     CyberDepot - Payload Repository
@@ -238,7 +243,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -256,10 +261,8 @@
       
   
   
-    
   
   
-  
     
     
     
@@ -271,11 +274,13 @@
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -290,7 +295,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Payloads
@@ -301,17 +306,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../payloads/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -321,7 +319,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -349,7 +346,7 @@
         
   
   
-    <a href="web_exploits/xss/" class="md-nav__link">
+    <a href="../../payloads/web_exploits/xss/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -392,7 +389,7 @@
         
   
   
-    <a href="credential_attacks/password_cracking/" class="md-nav__link">
+    <a href="../../payloads/credential_attacks/password_cracking/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -435,7 +432,7 @@
         
   
   
-    <a href="network_exploits/botnets/" class="md-nav__link">
+    <a href="../../payloads/network_exploits/botnets/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -478,7 +475,7 @@
         
   
   
-    <a href="search_engine_hacking/google_dorks/" class="md-nav__link">
+    <a href="../../payloads/search_engine_hacking/google_dorks/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -558,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reconnaissance/" class="md-nav__link">
+      <a href="../../reconnaissance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -595,7 +592,7 @@
         
   
   
-    <a href="../reconnaissance/tools/shodan/" class="md-nav__link">
+    <a href="../../reconnaissance/tools/shodan/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -638,7 +635,7 @@
         
   
   
-    <a href="../reconnaissance/cheatsheets/shodan_cheatsheet/" class="md-nav__link">
+    <a href="../../reconnaissance/cheatsheets/shodan_cheatsheet/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -670,8 +667,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -683,13 +682,11 @@
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -704,7 +701,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Authentication Bypass
@@ -718,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth_bypass/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -740,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth_bypass/otp_bypass/" class="md-nav__link">
+      <a href="../otp_bypass/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -759,10 +756,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../auth_bypass/password_reset_poisoning/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Password Reset Poisoning
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -772,6 +790,275 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setting-up-the-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Setting Up the Environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Setting Up the Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-burpsuite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring BurpSuite
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-initiating-the-password-reset-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Initiating the Password Reset Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Initiating the Password Reset Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trigger-password-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trigger Password Reset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capture-the-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capture the Request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-intercepting-the-password-reset-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Intercepting the Password Reset Email
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Intercepting the Password Reset Email">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#receive-the-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      Receive the Email
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capture-the-reset-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capture the Reset Link
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-intercepting-and-modifying-the-reset-link-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Intercepting and Modifying the Reset Link Request
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Intercepting and Modifying the Reset Link Request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-to-intercept-the-reset-link-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare to Intercept the Reset Link Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intercept-the-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intercept the Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyze-and-modify-the-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyze and Modify the Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forward-the-modified-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forward the Modified Request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-resetting-the-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Resetting the Password
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Resetting the Password">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete-the-password-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete the Password Reset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-in-with-the-new-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log In with the New Password
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-examples-and-advanced-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Examples and Advanced Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Examples and Advanced Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-exploiting-parameter-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Exploiting Parameter Manipulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-using-burpsuite-repeater-for-token-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Using BurpSuite Repeater for Token Manipulation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mitigation-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mitigation Strategies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -784,7 +1071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth_bypass/2fa_bypass_via_csrf/" class="md-nav__link">
+      <a href="../2fa_bypass_via_csrf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -858,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vuln_disclosures/" class="md-nav__link">
+      <a href="../../vuln_disclosures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -880,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vuln_disclosures/vuln_boelter_blue/" class="md-nav__link">
+      <a href="../../vuln_disclosures/vuln_boelter_blue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -954,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wifi_hacking/" class="md-nav__link">
+      <a href="../../wifi_hacking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -976,7 +1263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wifi_hacking/wifi_exploits/" class="md-nav__link">
+      <a href="../../wifi_hacking/wifi_exploits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1050,7 +1337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../htb/" class="md-nav__link">
+      <a href="../../htb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1087,7 +1374,7 @@
         
   
   
-    <a href="../htb/starting_point/" class="md-nav__link">
+    <a href="../../htb/starting_point/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1130,7 +1417,7 @@
         
   
   
-    <a href="../htb/retired_machines/" class="md-nav__link">
+    <a href="../../htb/retired_machines/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1177,9 +1464,262 @@
   
 
 
-  <h1>Overview</h1>
-
-
+<h1 id="password-reset-poisoning-intercepting-and-manipulating-email-links">Password Reset Poisoning: Intercepting and Manipulating Email Links</h1>
+<h2 id="overview">Overview</h2>
+<p>This tutorial demonstrates how to exploit vulnerabilities in the password reset process by intercepting and manipulating email links using BurpSuite. This can allow an attacker to reset a user’s password and gain unauthorized access to their account. This guide is intended for educational purposes to enhance your penetration testing skills as part of OSCP training.</p>
+<h2 id="step-by-step-guide">Step-by-Step Guide</h2>
+<h3 id="1-setting-up-the-environment">1. Setting Up the Environment</h3>
+<h4 id="prerequisites">Prerequisites</h4>
+<ul>
+<li>A vulnerable web application with a password reset feature.</li>
+<li>BurpSuite installed and configured to intercept HTTP/HTTPS traffic.</li>
+<li>An email client to receive password reset emails.</li>
+</ul>
+<h4 id="configuring-burpsuite">Configuring BurpSuite</h4>
+<ol>
+<li>
+<p><strong>Open BurpSuite</strong>:</p>
+<ul>
+<li>Launch BurpSuite and navigate to the "Proxy" tab.</li>
+<li>Click on "Intercept" to ensure it is turned on.</li>
+<li>
+<p><strong>Set Up Your Browser</strong>:</p>
+</li>
+<li>
+<p>Open your browser settings and configure the proxy settings to use <code>127.0.0.1</code> and port <code>8080</code> (default BurpSuite settings).</p>
+</li>
+<li>Ensure you have installed BurpSuite's CA certificate in your browser to avoid SSL/TLS issues. This can be done by going to BurpSuite's "Proxy" &gt; "Options" &gt; "Import / Export CA Certificate".</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-initiating-the-password-reset-process">2. Initiating the Password Reset Process</h3>
+<h4 id="trigger-password-reset">Trigger Password Reset</h4>
+<ol>
+<li>
+<p><strong>Navigate to the Target Web Application's Password Reset Page</strong>:</p>
+<ul>
+<li>Locate the "Forgot Password" or equivalent link on the login page.</li>
+<li>
+<p><strong>Enter the Email Address</strong>:</p>
+</li>
+<li>
+<p>Use the email address of the account you want to reset the password for.</p>
+</li>
+<li>
+<p><strong>Submit the Form</strong>:</p>
+</li>
+<li>
+<p>Click on the "Reset Password" or equivalent button to submit the request.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="capture-the-request">Capture the Request</h4>
+<ol>
+<li>
+<p><strong>Intercept the Request in BurpSuite</strong>:</p>
+<ul>
+<li>Ensure interception is turned on in BurpSuite. When you submit the form, BurpSuite will capture the HTTP request.</li>
+<li>
+<p><strong>Analyze the Request</strong>:</p>
+</li>
+<li>
+<p>Examine the request headers and parameters to understand how the password reset process works. For example:</p>
+</li>
+</ul>
+<p>`POST /reset_password HTTP/1.1
+Host: example.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 40</p>
+<p>email=user@example.com&amp;action=reset` </p>
+<ul>
+<li>Look for parameters like <code>email</code> or <code>user_id</code>.</li>
+<li>
+<p><strong>Forward the Request</strong>:</p>
+</li>
+<li>
+<p>Forward the request to allow the email to be sent to the target's email address.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-intercepting-the-password-reset-email">3. Intercepting the Password Reset Email</h3>
+<h4 id="receive-the-email">Receive the Email</h4>
+<ol>
+<li><strong>Check the Email Account</strong>:<ul>
+<li>Log in to the email account used for the password reset request.</li>
+<li>
+<p>Look for the password reset email. It typically contains a link or token for resetting the password, such as:</p>
+<p><code>https://example.com/reset_password?token=abcd1234</code> </p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="capture-the-reset-link">Capture the Reset Link</h4>
+<ol>
+<li><strong>Copy the Reset Link</strong>:<ul>
+<li>Copy the URL or token provided in the email.</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-intercepting-and-modifying-the-reset-link-request">4. Intercepting and Modifying the Reset Link Request</h3>
+<h4 id="prepare-to-intercept-the-reset-link-request">Prepare to Intercept the Reset Link Request</h4>
+<ol>
+<li>
+<p><strong>Paste the Reset Link into Your Browser</strong>:</p>
+<ul>
+<li>Paste the copied URL into your browser but do not press Enter yet.</li>
+<li>
+<p><strong>Turn On Interception in BurpSuite</strong>:</p>
+</li>
+<li>
+<p>Ensure BurpSuite's interception is enabled to capture the request.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="intercept-the-request">Intercept the Request</h4>
+<ol>
+<li><strong>Navigate to the Reset Link</strong>:<ul>
+<li>Press Enter to navigate to the reset link.</li>
+<li>
+<p>BurpSuite will capture the HTTP request containing the reset token or parameters, such as:</p>
+<p><code>GET /reset_password?token=abcd1234 HTTP/1.1
+Host: example.com</code> </p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="analyze-and-modify-the-request">Analyze and Modify the Request</h4>
+<ol>
+<li>
+<p><strong>Examine the Intercepted Request</strong>:</p>
+<ul>
+<li>Look for parameters like <code>token</code>, <code>reset_token</code>, <code>email</code>, or <code>user_id</code>.</li>
+<li>Identify which parameter controls the reset functionality.</li>
+<li>
+<p><strong>Modify the Parameters as Needed</strong>:</p>
+</li>
+<li>
+<p>Example 1: Change the token to another valid token if you have multiple accounts. Let's assume you have another valid token <code>efgh5678</code>:</p>
+<p><code>GET /reset_password?token=efgh5678 HTTP/1.1
+Host: example.com</code> </p>
+</li>
+<li>
+<p>Example 2: Change the email parameter to another valid email. Suppose the original request was:</p>
+<p><code>GET /reset_password?token=abcd1234&amp;email=user@example.com HTTP/1.1
+Host: example.com</code> </p>
+<p>You could change the email to an attacker-controlled email:</p>
+<p><code>GET /reset_password?token=abcd1234&amp;email=attacker@example.com HTTP/1.1
+Host: example.com</code> </p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Understand the Application's Logic</strong>:</p>
+<ul>
+<li>Analyze how the application validates the reset token. This can involve replaying the same request with slight modifications to see how the server responds.</li>
+<li>Check if the token is validated against the user's session or if it's independent. For example, some applications may bind the token to a specific IP address or session ID.</li>
+</ul>
+</li>
+</ol>
+<h4 id="forward-the-modified-request">Forward the Modified Request</h4>
+<ol>
+<li><strong>Forward the Modified Request</strong>:<ul>
+<li>Send the modified request to the server by clicking the "Forward" button in BurpSuite.</li>
+<li>Observe the server's response to confirm if the modification was successful.</li>
+</ul>
+</li>
+</ol>
+<h3 id="5-resetting-the-password">5. Resetting the Password</h3>
+<h4 id="complete-the-password-reset">Complete the Password Reset</h4>
+<ol>
+<li>
+<p><strong>Follow the Redirect</strong>:</p>
+<ul>
+<li>If the modified request is accepted, you will typically be redirected to a page where you can set a new password.</li>
+<li>
+<p><strong>Enter and Confirm the New Password</strong>:</p>
+</li>
+<li>
+<p>Enter a new password and confirm it to complete the reset process.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="log-in-with-the-new-password">Log In with the New Password</h4>
+<ol>
+<li><strong>Use the Newly Set Password to Log In</strong>:<ul>
+<li>Log in to the account using the new password to verify that the reset was successful.</li>
+</ul>
+</li>
+</ol>
+<h3 id="additional-examples-and-advanced-techniques">Additional Examples and Advanced Techniques</h3>
+<h4 id="example-exploiting-parameter-manipulation">Example: Exploiting Parameter Manipulation</h4>
+<ul>
+<li>
+<p>Suppose the reset link contains multiple parameters including a user identifier:</p>
+<p><code>https://example.com/reset_password?token=abcd1234&amp;user_id=123</code> </p>
+<p>You could change the <code>user_id</code> parameter to another valid user ID to see if the application allows resetting another user's password:</p>
+<p><code>https://example.com/reset_password?token=abcd1234&amp;user_id=456</code> </p>
+</li>
+</ul>
+<h4 id="example-using-burpsuite-repeater-for-token-manipulation">Example: Using BurpSuite Repeater for Token Manipulation</h4>
+<ul>
+<li>Use BurpSuite's Repeater tool to resend and modify the reset token:<ol>
+<li>Intercept the reset link request.</li>
+<li>Send the request to Repeater by right-clicking on the request and selecting "Send to Repeater".</li>
+<li>In the Repeater tab, modify the token or other parameters as needed.</li>
+<li>Send the modified request repeatedly with different values to test how the application responds.</li>
+</ol>
+</li>
+</ul>
+<h3 id="mitigation-strategies">Mitigation Strategies</h3>
+<p>To prevent password reset poisoning attacks, consider implementing the following security measures:</p>
+<ol>
+<li>
+<p><strong>Token Expiration</strong>:</p>
+<ul>
+<li>Ensure that password reset tokens have a short expiration time to limit the window of opportunity for attacks.</li>
+<li>
+<p><strong>Secure Token Generation</strong>:</p>
+</li>
+<li>
+<p>Use cryptographically secure methods to generate unique and random tokens to prevent prediction or reuse.</p>
+</li>
+<li>
+<p><strong>Rate Limiting</strong>:</p>
+</li>
+<li>
+<p>Implement rate limiting on password reset requests to prevent brute force attacks and token enumeration.</p>
+</li>
+<li>
+<p><strong>Email Confirmation</strong>:</p>
+</li>
+<li>
+<p>Require users to confirm their email address or other personal information before allowing a password reset to ensure the request's legitimacy.</p>
+</li>
+<li>
+<p><strong>Logging and Monitoring</strong>:</p>
+</li>
+<li>
+<p>Monitor and log password reset attempts and alert administrators of suspicious activity to detect and respond to potential attacks.</p>
+</li>
+<li>
+<p><strong>Use HTTPS</strong>:</p>
+</li>
+<li>
+<p>Ensure all communication between the client and server is encrypted to prevent interception of sensitive data.</p>
+</li>
+<li>
+<p><strong>Bind Tokens to User Sessions</strong>:</p>
+</li>
+<li>
+<p>Bind password reset tokens to the user’s session or IP address to prevent misuse by unauthorized parties.</p>
+</li>
+</ul>
+</li>
+</ol>
 
 
 
@@ -1278,12 +1818,12 @@
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.prune", "toc.follow", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.prune", "toc.follow", "navigation.top", "header.autohide"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="../js/custom.js"></script>
+        <script src="../../js/custom.js"></script>
       
     
   </body>

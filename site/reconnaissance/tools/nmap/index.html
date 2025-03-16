@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://github.com/InfoSec-DB/CyberDepot/payloads/">
+        <link rel="canonical" href="https://github.com/InfoSec-DB/CyberDepot/reconnaissance/tools/nmap/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../shodan/">
       
       
-        <link rel="next" href="web_exploits/xss/">
+        <link rel="next" href="../../cheatsheets/shodan_cheatsheet/">
       
       
-      <link rel="icon" href="../img/favicon.ico">
+      <link rel="icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
     
     
       
-        <title>Overview - CyberDepot - Payload Repository</title>
+        <title>Nmap - CyberDepot - Payload Repository</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../css/custom.css">
+      <link rel="stylesheet" href="../../../css/custom.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#nmap-cheat-sheet-for-penetration-testing" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -87,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="CyberDepot - Payload Repository" class="md-header__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
+    <a href="../../.." title="CyberDepot - Payload Repository" class="md-header__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
       
-  <img src="../img/logo.svg" alt="logo">
+  <img src="../../../img/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Nmap
             
           </span>
         </div>
@@ -209,9 +214,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="CyberDepot - Payload Repository" class="md-nav__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
+    <a href="../../.." title="CyberDepot - Payload Repository" class="md-nav__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
       
-  <img src="../img/logo.svg" alt="logo">
+  <img src="../../../img/logo.svg" alt="logo">
 
     </a>
     CyberDepot - Payload Repository
@@ -238,7 +243,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -256,10 +261,8 @@
       
   
   
-    
   
   
-  
     
     
     
@@ -271,11 +274,13 @@
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -290,7 +295,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Payloads
@@ -301,17 +306,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../payloads/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -321,7 +319,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -349,7 +346,7 @@
         
   
   
-    <a href="web_exploits/xss/" class="md-nav__link">
+    <a href="../../../payloads/web_exploits/xss/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -392,7 +389,7 @@
         
   
   
-    <a href="credential_attacks/password_cracking/" class="md-nav__link">
+    <a href="../../../payloads/credential_attacks/password_cracking/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -435,7 +432,7 @@
         
   
   
-    <a href="network_exploits/botnets/" class="md-nav__link">
+    <a href="../../../payloads/network_exploits/botnets/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -478,7 +475,7 @@
         
   
   
-    <a href="search_engine_hacking/google_dorks/" class="md-nav__link">
+    <a href="../../../payloads/search_engine_hacking/google_dorks/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -510,8 +507,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -523,13 +522,11 @@
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -544,7 +541,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Reconnaissance
@@ -558,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reconnaissance/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -577,6 +574,8 @@
                 
   
   
+    
+  
   
   
     
@@ -585,18 +584,17 @@
       
     
     
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
-  
-  
-    <a href="../reconnaissance/tools/shodan/" class="md-nav__link">
-      
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Tools
@@ -604,12 +602,175 @@
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shodan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shodan
+    
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Nmap
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Nmap
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-scanning-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Scanning Techniques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-and-os-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service and OS Detection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Scanning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stealth-and-evasion-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stealth and Evasion Techniques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script Scanning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Formats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-useful-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Useful Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -638,7 +799,7 @@
         
   
   
-    <a href="../reconnaissance/cheatsheets/shodan_cheatsheet/" class="md-nav__link">
+    <a href="../../cheatsheets/shodan_cheatsheet/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -718,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth_bypass/" class="md-nav__link">
+      <a href="../../../auth_bypass/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -740,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth_bypass/otp_bypass/" class="md-nav__link">
+      <a href="../../../auth_bypass/otp_bypass/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -762,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth_bypass/password_reset_poisoning/" class="md-nav__link">
+      <a href="../../../auth_bypass/password_reset_poisoning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -784,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth_bypass/2fa_bypass_via_csrf/" class="md-nav__link">
+      <a href="../../../auth_bypass/2fa_bypass_via_csrf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -858,7 +1019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vuln_disclosures/" class="md-nav__link">
+      <a href="../../../vuln_disclosures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -880,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vuln_disclosures/vuln_boelter_blue/" class="md-nav__link">
+      <a href="../../../vuln_disclosures/vuln_boelter_blue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -954,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wifi_hacking/" class="md-nav__link">
+      <a href="../../../wifi_hacking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -976,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wifi_hacking/wifi_exploits/" class="md-nav__link">
+      <a href="../../../wifi_hacking/wifi_exploits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1050,7 +1211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../htb/" class="md-nav__link">
+      <a href="../../../htb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1087,7 +1248,7 @@
         
   
   
-    <a href="../htb/starting_point/" class="md-nav__link">
+    <a href="../../../htb/starting_point/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1130,7 +1291,7 @@
         
   
   
-    <a href="../htb/retired_machines/" class="md-nav__link">
+    <a href="../../../htb/retired_machines/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1177,9 +1338,132 @@
   
 
 
-  <h1>Overview</h1>
-
-
+<h1 id="nmap-cheat-sheet-for-penetration-testing">Nmap Cheat Sheet for Penetration Testing</h1>
+<p>Nmap (Network Mapper) is a free and open source utility for network discovery and security auditing. It is used to discover hosts and services on a computer network, thus building a "map" of the network. Here's how to use Nmap effectively in penetration testing:</p>
+<h2 id="basic-scanning-techniques">Basic Scanning Techniques</h2>
+<ul>
+<li><strong>Scan a single IP or host</strong></li>
+</ul>
+<p><code>nmap 192.168.1.1</code></p>
+<ul>
+<li><strong>Scan a range of IPs</strong></li>
+</ul>
+<p><code>nmap 192.168.1.1-20</code></p>
+<ul>
+<li><strong>Scan a subnet</strong></li>
+</ul>
+<p><code>nmap 192.168.1.0/24</code></p>
+<ul>
+<li><strong>Scan for every TCP port (1-65535)</strong></li>
+</ul>
+<p><code>nmap -p- 192.168.1.1</code></p>
+<ul>
+<li><strong>Perform a fast scan</strong></li>
+</ul>
+<p><code>nmap -T4 -F 192.168.1.1</code></p>
+<h2 id="service-and-os-detection">Service and OS Detection</h2>
+<ul>
+<li><strong>Detect OS and Services</strong></li>
+</ul>
+<p><code>nmap -A 192.168.1.1</code></p>
+<ul>
+<li><strong>Standard service detection</strong></li>
+</ul>
+<p><code>nmap -sV 192.168.1.1</code></p>
+<h2 id="advanced-scanning">Advanced Scanning</h2>
+<ul>
+<li><strong>Use TCP SYN scan (root only)</strong></li>
+</ul>
+<p><code>nmap -sS 192.168.1.1</code></p>
+<ul>
+<li><strong>Use TCP connect scan (non-root)</strong></li>
+</ul>
+<p><code>nmap -sT 192.168.1.1</code></p>
+<ul>
+<li><strong>UDP scan</strong></li>
+</ul>
+<p><code>nmap -sU -p 123,161,162 192.168.1.1</code></p>
+<ul>
+<li><strong>SCTP INIT scan</strong></li>
+</ul>
+<p><code>nmap -sY 192.168.1.1</code></p>
+<h2 id="stealth-and-evasion-techniques">Stealth and Evasion Techniques</h2>
+<ul>
+<li><strong>Fragment packets</strong></li>
+</ul>
+<p><code>nmap -f 192.168.1.1</code></p>
+<ul>
+<li><strong>Specify a custom MTU</strong></li>
+</ul>
+<p><code>nmap --mtu 24 192.168.1.1</code></p>
+<ul>
+<li><strong>Send bad checksums</strong></li>
+</ul>
+<p><code>nmap --badsum 192.168.1.1</code></p>
+<ul>
+<li><strong>Decoy scan</strong></li>
+</ul>
+<p><code>nmap -D RND:10 [target]</code></p>
+<p><code>nmap -D decoy1,decoy2,ME,decoy3,decoy4 [target]</code></p>
+<h2 id="script-scanning">Script Scanning</h2>
+<ul>
+<li><strong>Using default safe scripts</strong></li>
+</ul>
+<p><code>nmap -sC 192.168.1.1</code></p>
+<ul>
+<li><strong>Script scanning with specific script</strong></li>
+</ul>
+<p><code>nmap --script=ssl-heartbleed 192.168.1.1</code></p>
+<ul>
+<li><strong>Script scanning with script arguments</strong></li>
+</ul>
+<p><code>nmap --script=smb-check-vulns --script-args=unsafe=1 192.168.1.1</code></p>
+<h2 id="output-formats">Output Formats</h2>
+<ul>
+<li><strong>Save output to a file</strong></li>
+</ul>
+<p><code>nmap -oN output.txt 192.168.1.1</code></p>
+<ul>
+<li><strong>Output in all formats</strong></li>
+</ul>
+<p><code>nmap -oA output 192.168.1.1</code></p>
+<ul>
+<li><strong>Grepable output</strong></li>
+</ul>
+<p><code>nmap -oG output.txt 192.168.1.1</code></p>
+<h2 id="additional-useful-commands">Additional Useful Commands</h2>
+<ul>
+<li><strong>Aggressive timing template</strong></li>
+</ul>
+<p><code>nmap -T5 192.168.1.1</code></p>
+<ul>
+<li><strong>Idle scan using a zombie host</strong></li>
+</ul>
+<p><code>nmap -sI [zombie] 192.168.1.1</code></p>
+<ul>
+<li><strong>IPv6 scanning</strong></li>
+</ul>
+<p><code>nmap -6 [IPv6 address]</code></p>
+<h2 id="examples">Examples</h2>
+<ul>
+<li><strong>Basic host scan example</strong></li>
+</ul>
+<p><code>nmap example.com</code></p>
+<ul>
+<li><strong>Service detection example</strong></li>
+</ul>
+<p><code>nmap -sV example.com</code></p>
+<ul>
+<li><strong>OS and service detection example</strong></li>
+</ul>
+<p><code>nmap -A example.com</code></p>
+<ul>
+<li><strong>Decoy scan example</strong></li>
+</ul>
+<p><code>nmap -D decoy1,decoy2,ME,decoy3,decoy4 example.com</code></p>
+<p><strong>Script scan using specific scripts example</strong></p>
+<p><code>nmap --script=ssl-heartbleed example.com</code></p>
+<p>This cheat sheet provides a foundation for using Nmap in penetration testing and security assessments, with detailed commands for various scanning scenarios. These commands can help you discover network vulnerabilities, audit network security, and perform reconnaissance tasks effectively.</p>
 
 
 
@@ -1278,12 +1562,12 @@
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.prune", "toc.follow", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.prune", "toc.follow", "navigation.top", "header.autohide"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="../js/custom.js"></script>
+        <script src="../../../js/custom.js"></script>
       
     
   </body>

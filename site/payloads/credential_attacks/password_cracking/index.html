@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://github.com/InfoSec-DB/CyberDepot/payloads/">
+        <link rel="canonical" href="https://github.com/InfoSec-DB/CyberDepot/payloads/credential_attacks/password_cracking/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../../web_exploits/csrf/">
       
       
-        <link rel="next" href="web_exploits/xss/">
+        <link rel="next" href="../credential_stuffing/">
       
       
-      <link rel="icon" href="../img/favicon.ico">
+      <link rel="icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
     
     
       
-        <title>Overview - CyberDepot - Payload Repository</title>
+        <title>Password Cracking - CyberDepot - Payload Repository</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../css/custom.css">
+      <link rel="stylesheet" href="../../../css/custom.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -87,9 +87,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="CyberDepot - Payload Repository" class="md-header__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
+    <a href="../../.." title="CyberDepot - Payload Repository" class="md-header__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
       
-  <img src="../img/logo.svg" alt="logo">
+  <img src="../../../img/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Password Cracking
             
           </span>
         </div>
@@ -209,9 +209,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="CyberDepot - Payload Repository" class="md-nav__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
+    <a href="../../.." title="CyberDepot - Payload Repository" class="md-nav__button md-logo" aria-label="CyberDepot - Payload Repository" data-md-component="logo">
       
-  <img src="../img/logo.svg" alt="logo">
+  <img src="../../../img/logo.svg" alt="logo">
 
     </a>
     CyberDepot - Payload Repository
@@ -238,7 +238,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -301,17 +301,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -321,7 +314,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -349,7 +341,7 @@
         
   
   
-    <a href="web_exploits/xss/" class="md-nav__link">
+    <a href="../../web_exploits/xss/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -374,6 +366,8 @@
                 
   
   
+    
+  
   
   
     
@@ -382,18 +376,17 @@
       
     
     
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
-  
-  
-    <a href="credential_attacks/password_cracking/" class="md-nav__link">
-      
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Credential Attacks
@@ -401,12 +394,70 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Credential Attacks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
       
-        <span class="md-nav__icon md-icon"></span>
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-    </a>
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Password Cracking
+    
+  </span>
   
 
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../credential_stuffing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Credential Stuffing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -435,7 +486,7 @@
         
   
   
-    <a href="network_exploits/botnets/" class="md-nav__link">
+    <a href="../../network_exploits/botnets/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -478,7 +529,7 @@
         
   
   
-    <a href="search_engine_hacking/google_dorks/" class="md-nav__link">
+    <a href="../../search_engine_hacking/google_dorks/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -558,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reconnaissance/" class="md-nav__link">
+      <a href="../../../reconnaissance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -595,7 +646,7 @@
         
   
   
-    <a href="../reconnaissance/tools/shodan/" class="md-nav__link">
+    <a href="../../../reconnaissance/tools/shodan/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -638,7 +689,7 @@
         
   
   
-    <a href="../reconnaissance/cheatsheets/shodan_cheatsheet/" class="md-nav__link">
+    <a href="../../../reconnaissance/cheatsheets/shodan_cheatsheet/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -718,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth_bypass/" class="md-nav__link">
+      <a href="../../../auth_bypass/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -740,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth_bypass/otp_bypass/" class="md-nav__link">
+      <a href="../../../auth_bypass/otp_bypass/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -762,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth_bypass/password_reset_poisoning/" class="md-nav__link">
+      <a href="../../../auth_bypass/password_reset_poisoning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -784,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth_bypass/2fa_bypass_via_csrf/" class="md-nav__link">
+      <a href="../../../auth_bypass/2fa_bypass_via_csrf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -858,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vuln_disclosures/" class="md-nav__link">
+      <a href="../../../vuln_disclosures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -880,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vuln_disclosures/vuln_boelter_blue/" class="md-nav__link">
+      <a href="../../../vuln_disclosures/vuln_boelter_blue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -954,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wifi_hacking/" class="md-nav__link">
+      <a href="../../../wifi_hacking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -976,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wifi_hacking/wifi_exploits/" class="md-nav__link">
+      <a href="../../../wifi_hacking/wifi_exploits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1050,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../htb/" class="md-nav__link">
+      <a href="../../../htb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1087,7 +1138,7 @@
         
   
   
-    <a href="../htb/starting_point/" class="md-nav__link">
+    <a href="../../../htb/starting_point/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1130,7 +1181,7 @@
         
   
   
-    <a href="../htb/retired_machines/" class="md-nav__link">
+    <a href="../../../htb/retired_machines/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1177,7 +1228,7 @@
   
 
 
-  <h1>Overview</h1>
+  <h1>Password Cracking</h1>
 
 
 
@@ -1278,12 +1329,12 @@
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.prune", "toc.follow", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.prune", "toc.follow", "navigation.top", "header.autohide"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="../js/custom.js"></script>
+        <script src="../../../js/custom.js"></script>
       
     
   </body>

@@ -59,6 +59,10 @@ nav:
 theme:
   name: material
   features:
+    - navigation.sections  # Enables collapsible sidebar categories
+    - navigation.expand  # Ensures categories can be expanded/collapsed
+    - navigation.prune  # Hides empty or invalid navigation items
+    - navigation.indexes  # Makes category headers clickable if they have an index.md
     - toc.integrate
     - navigation.top
     - search.suggest
@@ -68,11 +72,7 @@ theme:
     - content.code.copy
     - navigation.instant
     - navigation.instant.progress
-    - navigation.sections
-    - navigation.expand
-    - navigation.prune
     - toc.follow
-    - navigation.top
     - header.autohide
   language: en
   palette:
