@@ -5,24 +5,21 @@ repo_url: https://github.com/InfoSec-DB/CyberDepot
 nav:
   - CyberDepot: index.md
   - Payloads:
-      - XSS Payloads: xsspayloads.md
-  - Password Cracking: passcrack.md
-  - Google Dorks: googledorks.md
+      - "Explore Payloads": payloads/index.md
+      - "XSS Payloads": payloads/xsspayloads.md
+      - "Password Cracking": payloads/passcrack.md
+      - "Google Dorks": payloads/googledorks.md
   - Reconnaissance:
-      - Shodan Guides: shodan.md
-      - Nmap Cheat Sheet: nmap.md
+      - "Shodan Guides": reconnaissance/shodan.md
+      - "Nmap Cheat Sheet": reconnaissance/nmap.md
   - Authentication Bypass:
-      - OTP Bypass Techniques: otpbypass.md
-      - Password Reset Poisoning: passresetpoison.md
-      - 2FA Bypass via CSRF: 2fabypasscsrf.md
-  - Vulnerability Disclosures: 
-      - Boelter Blue System Management v1.3: vuln_boelter_blue.md
-  - HTB Writeups: 
-      - MonGod: htb_mongod.md
-
-
-
-
+      - "OTP Bypass Techniques": auth_bypass/otpbypass.md
+      - "Password Reset Poisoning": auth_bypass/passresetpoison.md
+      - "2FA Bypass via CSRF": auth_bypass/2fabypasscsrf.md
+  - Vulnerability Disclosures:
+      - "Boelter Blue System Management v1.3": vuln_disclosures/vuln_boelter_blue.md
+  - HTB Writeups:
+      - "MonGod": htb/mongod.md
 
 theme:
   name: material
@@ -36,23 +33,23 @@ theme:
     - content.code.copy
     - navigation.instant
     - navigation.instant.progress
-    - navigation.sections
-    - navigation.expand
+    - navigation.sections  # Enables collapsible categories
+    - navigation.expand  # Keeps top categories visible
     - navigation.prune
+    - navigation.indexes  # Ensures category names are clickable
     - toc.follow
-    - navigation.top
     - header.autohide
   language: en
   palette:
-    - scheme: slate  # Use a dark scheme as the base
-      primary: custom  # Bright red for primary actions and highlights
-      accent: grey  # Grey for less prominent accents
-  dark_mode: true  # Ensure that dark mode is the default
+    - scheme: slate  # Dark mode
+      primary: custom  # Bright red for highlights
+      accent: grey  # Subtle contrast
+  dark_mode: true
   font:
-    text: "Roboto Mono"  # Monospaced font for that code-like feel
-    code: "Fira Code"  # Excellent for showing code snippets with ligatures
-  logo: "img/logo.svg"  # Custom logo for branding
-  favicon: "img/favicon.ico"  # Custom favicon
+    text: "Roboto Mono"
+    code: "Fira Code"
+  logo: "img/logo.svg"
+  favicon: "img/favicon.ico"
   icon:
     repo: fontawesome/brands/github-alt
   titles_only: true
@@ -63,10 +60,10 @@ plugins:
   - search
 
 extra_css:
-  - css/custom.css  # Additional styles for customization
+  - css/custom.css  # Custom styles
 
 extra_javascript:
-  - js/custom.js  # For any special interactive elements or fixes
+  - js/custom.js  # Custom scripts
 
 extra:
   social:
@@ -98,4 +95,4 @@ markdown_extensions:
           - overrides/.icons
 
 copyright: |
-  &copy; 2023 <a href="https://github.com/InfoSec-DB/" target="_blank" rel="noopener">InfoSec-DB</a>
+  &copy; 2025 <a href="https://github.com/InfoSec-DB/" target="_blank" rel="noopener">InfoSec-DB</a>
