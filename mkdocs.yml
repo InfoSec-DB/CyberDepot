@@ -50,14 +50,9 @@ nav:
 
 
 
-
-
 theme:
   name: material
   features:
-    - navigation.sections
-    - navigation.prune
-    - navigation.indexes
     - toc.integrate
     - navigation.top
     - search.suggest
@@ -65,7 +60,13 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.expand
+    - navigation.prune
     - toc.follow
+    - navigation.top
     - header.autohide
   language: en
   palette:
