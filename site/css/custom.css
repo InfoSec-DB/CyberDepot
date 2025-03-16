@@ -143,3 +143,32 @@ footer {
 .md-sidebar--primary .md-nav__link:not(:visited) {
     color: #74ff51;
 }
+
+/* 🔽 Collapsible Sidebar Fix */
+.md-nav__list {
+    display: none; /* Hide submenu by default */
+}
+
+.md-nav__item--nested > .md-nav__link {
+    cursor: pointer; /* Make categories clickable */
+    font-weight: bold;
+}
+
+.md-nav__item--nested > .md-nav__list {
+    display: none;
+}
+
+.md-nav__item--nested.open > .md-nav__list {
+    display: block;
+}
+
+/* 🔽 JavaScript to Handle Collapsible Sidebar */
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".md-nav__item--nested > .md-nav__link").forEach((category) => {
+        category.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent link navigation
+            let parentItem = this.parentNode;
+            parentItem.classList.toggle("open"); // Toggle class
+        });
+    });
+});
