@@ -1,24 +1,23 @@
-﻿/* 🌙 Overall Background & Text Styling */
+﻿/* 🌌 General Page Styling */
 body {
-    background-color: #1b1f27; /* Darker background for a smoother UI */
+    background-color: #16181d; /* Darker cyberpunk background */
     color: #cfcfcf;
-    font-size: 14px; /* More readable font size */
+    font-size: 15px; /* Better readability */
     font-family: "Roboto", sans-serif;
 }
 
 /* 🎨 Primary Theme Colors */
 :root {
-    --md-primary-fg-color: #841f36; /* Dark red primary */
-    --md-primary-fg-color--light: #c04e65; /* Lighter red for hover states */
-    --md-primary-fg-color--dark: #5f1324; /* Darker red for active states */
+    --md-primary-fg-color: #a32b44; /* Deep red primary */
+    --md-primary-fg-color--light: #d44d65; /* Lighter red */
+    --md-primary-fg-color--dark: #731e2e; /* Darker red */
 }
 
-/* 🏗️ Navbar Improvements */
-.md-header-nav {
-    background-color: #1b1f27; /* Matches the overall theme */
-    border-bottom: 2px solid #00bcd4; /* Thicker neon cyan border */
+/* 🌍 Navbar Styling */
+.md-header {
+    background-color: #181b22;
+    border-bottom: 2px solid #00bcd4; /* Neon cyan border */
     height: 50px;
-    font-size: 16px;
 }
 
 .md-header-nav__title {
@@ -28,28 +27,35 @@ body {
     letter-spacing: 1px;
 }
 
-/* 📂 Sidebar Navigation - Normal Links */
-.md-sidebar--primary .md-nav__link {
-    color: #00bcd4;
-    padding: 12px 18px; /* Adds spacing for better readability */
-    font-size: 15px;
-    transition: all 0.3s ease;
+/* 📂 Sidebar Navigation */
+.md-sidebar--primary {
+    background-color: #1b1f27; /* Darker for depth */
+    padding-top: 10px;
 }
 
-    /* 🔥 Sidebar Hover Effect */
-    .md-sidebar--primary .md-nav__link:hover {
-        background-color: #2a2d38; /* Darker hover background */
-        color: #74ff51;
-        border-left: 4px solid #74ff51; /* Subtle highlight */
+    .md-sidebar--primary .md-nav__link {
+        color: #00bcd4;
+        padding: 12px 20px;
+        font-size: 15px;
+        transition: all 0.3s ease-in-out;
+        border-radius: 4px;
     }
 
-/* ✅ Active Section in Sidebar */
-.md-sidebar--primary .md-nav__link--active {
-    color: #74ff51;
-    font-weight: bold;
-    border-left: 5px solid #74ff51; /* Stronger left highlight */
-    background-color: rgba(0, 188, 212, 0.1);
-}
+        /* 🌟 Sidebar Hover Effects */
+        .md-sidebar--primary .md-nav__link:hover {
+            background-color: #232731;
+            color: #74ff51;
+            border-left: 4px solid #74ff51;
+            padding-left: 16px;
+        }
+
+    /* 🔥 Active Section in Sidebar */
+    .md-sidebar--primary .md-nav__link--active {
+        color: #74ff51;
+        font-weight: bold;
+        border-left: 5px solid #74ff51;
+        background-color: rgba(0, 188, 212, 0.1);
+    }
 
 /* 📌 Sidebar Section Headers */
 .md-nav__title {
@@ -57,11 +63,10 @@ body {
     font-weight: bold;
     color: #ffffff;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
     padding: 10px 15px;
 }
 
-/* 🔹 Breadcrumb Navigation */
+/* 🔄 Breadcrumb Navigation */
 .md-header-nav__breadcrumb {
     font-size: 13px;
     color: #00bcd4;
@@ -71,14 +76,14 @@ body {
 /* 📑 Main Content Styling */
 .md-grid, .md-typeset {
     font-size: 15px;
-    line-height: 1.6; /* Improves readability */
+    line-height: 1.6;
 }
 
     /* 📝 Header Styling */
     .md-typeset h1 {
         font-size: 24px;
         font-weight: bold;
-        color: #74ff51; /* Bright green for emphasis */
+        color: #74ff51;
     }
 
     .md-typeset h2 {
@@ -91,26 +96,27 @@ body {
         color: #c04e65;
     }
 
-    /* 🖥️ Code Block Styling */
+    /* 🖥️ Enhanced Code Block Styling */
     .md-typeset pre {
-        background: linear-gradient(to right, #1c1f26 0%, #23272e 100%);
+        background: linear-gradient(to right, #121417 0%, #232731 100%);
         border: 1px solid #00bcd4;
-        box-shadow: 0 0 12px rgba(0, 188, 212, 0.4);
+        box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
         padding: 12px;
         border-radius: 6px;
         overflow-x: auto;
     }
 
         .md-typeset pre code {
-            color: #8abeb7;
+            background: transparent;
+            color: #8aff80; /* Cyber green */
             font-family: 'Fira Code', monospace;
-            font-size: 13px;
+            font-size: 14px;
         }
 
 /* 🎯 Sidebar Scroll Improvements */
 .md-sidebar {
     scrollbar-width: thin;
-    scrollbar-color: #00bcd4 #1b1f27;
+    scrollbar-color: #00bcd4 #16181d;
 }
 
     .md-sidebar::-webkit-scrollbar {
@@ -118,7 +124,7 @@ body {
     }
 
     .md-sidebar::-webkit-scrollbar-track {
-        background: #1b1f27;
+        background: #16181d;
     }
 
     .md-sidebar::-webkit-scrollbar-thumb {
@@ -128,7 +134,7 @@ body {
 
 /* 📌 Footer Styling */
 footer {
-    background-color: #1b1f27;
+    background-color: #181b22;
     color: #fff;
     padding: 20px;
     text-align: center;
