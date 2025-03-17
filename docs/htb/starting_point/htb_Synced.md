@@ -4,7 +4,7 @@ Welcome to the documentation for the **HTB Synced Exploit**. This site is genera
 
 ## Overview
 
-The HTB Synced Exploit is a Python-based tool designed for use in Capture The Flag (CTF) challenges—specifically targeting systems with anonymous Rsync access. It automates the process of scanning for the Rsync service, listing available modules, downloading data, and retrieving the flag file if available.
+The HTB Synced Exploit is a Python-based tool designed for use in Capture The Flag (CTF) challengesâ€”specifically targeting systems with anonymous Rsync access. It automates the process of scanning for the Rsync service, listing available modules, downloading data, and retrieving the flag file if available.
 
 ## Features
 
