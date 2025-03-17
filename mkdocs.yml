@@ -39,7 +39,6 @@ nav:
   - HTB Writeups:
       - "Overview": htb/index.md
       - "Starting Point":
-          - "Overview": htb/starting_point/index.md
           - "Machines":
               - htb/starting_point/htb_mongod.md
               - htb/starting_point/htb_Bike.md
