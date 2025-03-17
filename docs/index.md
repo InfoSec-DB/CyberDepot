@@ -1,13 +1,14 @@
 
+
 # 🚀 Welcome to CyberDepot — Your Ultimate Cybersecurity Resource
 
 
-
-**Welcome to CyberDepot**, a meticulously curated knowledge base designed for cybersecurity professionals, ethical hackers, and penetration testers. Whether you're looking for **payloads, reconnaissance tools, authentication bypass techniques, or HTB write-ups**, CyberDepot is your go-to repository for offensive security techniques. 🛡️
-
+*Welcome to CyberDepot**, a meticulously curated knowledge base designed for cybersecurity professionals, ethical hackers, and penetration testers. Whether you're looking for **payloads, reconnaissance tools, authentication bypass techniques, or HTB write-ups**, CyberDepot is your go-to repository for offensive security techniques.
 
 
-### 🔍 Explore Our Knowledge Base
+## 🔍 Explore Our Knowledge Base
+
+---
 
 # 🛠️ **Payloads & Exploits**
 - **Web Exploits**: XSS Attacks, SQL Injection, CSRF Exploits.

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Github\\CyberDepot\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\vuln_boelter_blue.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
@@ -122,7 +122,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -293,13 +293,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "custom.css",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\css\\custom.css",
               "RelativeDocumentMoniker": "docs\\css\\custom.css",
               "ToolTip": "D:\\Github\\CyberDepot\\docs\\css\\custom.css",
               "RelativeToolTip": "docs\\css\\custom.css",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAI8AAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAG4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-03-16T20:10:52.422Z",
               "EditorCaption": ""
@@ -330,13 +330,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "index.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\index.md",
               "RelativeDocumentMoniker": "docs\\index.md",
               "ToolTip": "D:\\Github\\CyberDepot\\docs\\index.md",
               "RelativeToolTip": "docs\\index.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2025-03-16T19:10:31.767Z",
               "EditorCaption": ""
