@@ -615,18 +615,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Hack The Box - Mongod Writeup
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -637,118 +625,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔥 Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#target-enumeration-recon" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 Target Enumeration &amp; Recon
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🎯 Target Enumeration &amp; Recon">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-nmap-scan" class="md-nav__link">
-    <span class="md-ellipsis">
-      1️⃣ Nmap Scan
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exploitation-unauthenticated-mongodb-access" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Exploitation: Unauthenticated MongoDB Access
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Exploitation: Unauthenticated MongoDB Access">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2-connecting-to-mongodb" class="md-nav__link">
-    <span class="md-ellipsis">
-      2️⃣ Connecting to MongoDB
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extracting-the-flag" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 Extracting the Flag
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automating-the-exploit" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔥 Automating the Exploit
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#afterdark-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      💀 AfterDark Security
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -884,7 +760,7 @@
 
 <h1 id="hack-the-box-mongod-writeup">Hack The Box - Mongod Writeup</h1>
 <p><img alt="HTB Banner" src="https://www.hackthebox.com/badge/image/your-badge-id" /></p>
-<h2 id="overview">🔥 Overview</h2>
+<h1 id="overview">🔥 Overview</h1>
 <p><strong>Machine Name:</strong> Mongod<br />
 <strong>Difficulty:</strong> Easy<br />
 <strong>Vulnerability:</strong> MongoDB Misconfiguration<br />
@@ -892,7 +768,7 @@
 <strong>Technology Stack:</strong> MongoDB NoSQL Database (TCP:27017)  </p>
 <hr />
 <h2 id="target-enumeration-recon">🎯 <strong>Target Enumeration &amp; Recon</strong></h2>
-<h3 id="1-nmap-scan"><strong>1️⃣ Nmap Scan</strong></h3>
+<h1 id="1-nmap-scan"><strong>1️⃣ Nmap Scan</strong></h1>
 <p>We start with an <strong>Nmap</strong> scan to identify open ports and services running on the target machine:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>nmap<span class="w"> </span>-sC<span class="w"> </span>-sV<span class="w"> </span>-p-<span class="w"> </span><span class="m">10</span>.129.107.200
 </code></pre></div>
@@ -902,9 +778,9 @@
 </code></pre></div>
 MongoDB is running on <strong>port 27017</strong>, and based on the <strong>version (3.6.8)</strong>, it might be <strong>misconfigured</strong>.</p>
 <hr />
-<h2 id="exploitation-unauthenticated-mongodb-access">🚀 <strong>Exploitation: Unauthenticated MongoDB Access</strong></h2>
+<h1 id="exploitation-unauthenticated-mongodb-access">🚀 <strong>Exploitation: Unauthenticated MongoDB Access</strong></h1>
 <p>MongoDB sometimes allows <strong>unauthenticated access</strong>, meaning we can connect and extract information <strong>without credentials</strong>.</p>
-<h3 id="2-connecting-to-mongodb"><strong>2️⃣ Connecting to MongoDB</strong></h3>
+<h1 id="2-connecting-to-mongodb"><strong>2️⃣ Connecting to MongoDB</strong></h1>
 <p>We use <code>mongosh</code> (MongoDB shell) to check if we have direct access:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mongosh<span class="w"> </span>mongodb://10.129.107.200:27017
 </code></pre></div>
@@ -920,7 +796,7 @@ MongoDB is running on <strong>port 27017</strong>, and based on the <strong>vers
 </code></pre></div></p>
 <p>The <strong><code>sensitive_information</code></strong> database seems interesting.</p>
 <hr />
-<h2 id="extracting-the-flag">🎯 <strong>Extracting the Flag</strong></h2>
+<h1 id="extracting-the-flag">🎯 <strong>Extracting the Flag</strong></h1>
 <p>Let's switch to the <strong>sensitive_information</strong> database and list its collections:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">use</span><span class="w"> </span><span class="nx">sensitive_information</span><span class="p">;</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">show</span><span class="w"> </span><span class="nx">collections</span><span class="p">;</span>
@@ -941,7 +817,7 @@ MongoDB is running on <strong>port 27017</strong>, and based on the <strong>vers
 </code></pre></div></p>
 <p>✅ <strong>FLAG FOUND:</strong> <code>1b6e6fb359e7c40241b6d431427ba6ea</code></p>
 <hr />
-<h2 id="automating-the-exploit">🔥 <strong>Automating the Exploit</strong></h2>
+<h1 id="automating-the-exploit">🔥 <strong>Automating the Exploit</strong></h1>
 <p>Instead of doing this manually, we created a Python exploit:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
@@ -991,7 +867,7 @@ MongoDB is running on <strong>port 27017</strong>, and based on the <strong>vers
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>python3<span class="w"> </span>mongo_pwn.py
 </code></pre></div>
 <hr />
-<h2 id="conclusion">🎯 <strong>Conclusion</strong></h2>
+<h1 id="conclusion">🎯 <strong>Conclusion</strong></h1>
 <p>This box demonstrates the <strong>importance of securing MongoDB</strong> against unauthenticated access. The key takeaways:</p>
 <ul>
 <li>Always <strong>require authentication</strong> for databases.</li>
@@ -1000,7 +876,7 @@ MongoDB is running on <strong>port 27017</strong>, and based on the <strong>vers
 </ul>
 <p>✅ <strong>Mission Accomplished!</strong> 🎉</p>
 <hr />
-<h2 id="afterdark-security">💀 <strong>AfterDark Security</strong></h2>
+<h1 id="afterdark-security">💀 <strong>AfterDark Security</strong></h1>
 <p>Follow <strong>#AfterDark</strong> for more <strong>CTF solutions, pentesting tricks, and cybersecurity research!</strong><br />
 🚀 <strong>GitHub:</strong> [Your Repo Link]<br />
 🐦 <strong>Twitter:</strong> [Your Twitter Handle]  </p>
