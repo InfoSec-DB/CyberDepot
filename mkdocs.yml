@@ -62,7 +62,7 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
-    - navigation.instant
+    - navigation.instant.progress
     - navigation.prune
     - toc.follow
     - header.autohide
