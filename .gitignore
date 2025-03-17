@@ -26,3 +26,5 @@
 *.sqlite
 *.sqlite
 *.sqlite
+*.sqlite
+/.vs
