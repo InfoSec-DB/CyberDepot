@@ -2,14 +2,14 @@
 
 ![Bike Logo](https://infosec-db.github.io/CyberDepot/assets/htb-bike.png)
 
-## Overview
+# Overview
 **HTB Bike** is a *Hack The Box* machine that involves exploiting a **Server-Side Template Injection (SSTI)** vulnerability in a **Node.js Handlebars template engine**. This write-up provides a detailed walkthrough of the exploitation process and includes a fully automated **SQLmap-styled** exploit script.
 
 ---
 
-## Enumeration
+# Enumeration
 
-### **🔍 Nmap Scan**
+# **🔍 Nmap Scan**
 We start by scanning the target with **Nmap**:
 
 ```bash
@@ -37,9 +37,9 @@ If the response contains `49`, **the site is vulnerable!** ✅
 
 ---
 
-## Exploitation
+# Exploitation
 
-### **🔗 Exploit Payload**
+# **🔗 Exploit Payload**
 Using **Handlebars SSTI**, we craft a payload that executes system commands:
 
 ```handlebars
@@ -68,14 +68,14 @@ This **bypasses sandboxing** and allows **Remote Code Execution (RCE)**!
 
 ---
 
-## 🚀 Automating the Exploit
+# 🚀 Automating the Exploit
 
 We use a **fully automated Python script** with:
 ✅ **SQLmap-style output**  
 ✅ **Fancy ASCII banner**  
 ✅ **JSON debugging for failed extractions**  
 
-### **📜 Proof of Concept (PoC) Exploit Script**
+# **📜 Proof of Concept (PoC) Exploit Script**
 
 ```python
 import requests
@@ -208,7 +208,7 @@ if __name__ == "__main__":
 
 ---
 
-## 📜 Conclusion
+# 📜 Conclusion
 This challenge demonstrates **how dangerous SSTI can be**, especially in **Node.js-based applications**. The exploit works by **breaking out of the Handlebars sandbox** and gaining **full system control**.
 
 ---
