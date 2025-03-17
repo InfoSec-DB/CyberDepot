@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "D:\\Github\\CyberDepot\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\payloads\\web_exploits\\xss.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\payloads\\web_exploits\\xss.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\payloads\\web_exploits\\sql_injection.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\payloads\\web_exploits\\sql_injection.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\payloads\\web_exploits\\csrf.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\payloads\\web_exploits\\csrf.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\payloads\\search_engine_hacking\\google_dorks.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\payloads\\search_engine_hacking\\google_dorks.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\payloads\\network_exploits\\reverse_shells.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\payloads\\network_exploits\\reverse_shells.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\payloads\\network_exploits\\botnets.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\payloads\\network_exploits\\botnets.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\payloads\\credential_attacks\\password_cracking.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\payloads\\credential_attacks\\password_cracking.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\payloads\\credential_attacks\\credential_stuffing.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\payloads\\credential_attacks\\credential_stuffing.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
@@ -67,22 +99,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\reconnaissance\\index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\payloads\\credential_attacks\\credential_stuffing.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\payloads\\credential_attacks\\credential_stuffing.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\payloads\\web_exploits\\csrf.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\payloads\\web_exploits\\csrf.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\payloads\\web_exploits\\sql_injection.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\payloads\\web_exploits\\sql_injection.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\payloads\\web_exploits\\xss.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\payloads\\web_exploits\\xss.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\CyberDepot\\docs\\payloads\\index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\payloads\\index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
@@ -122,7 +138,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,7 +146,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
+              "Title": "google_dorks.md",
+              "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\payloads\\search_engine_hacking\\google_dorks.md",
+              "RelativeDocumentMoniker": "docs\\payloads\\search_engine_hacking\\google_dorks.md",
+              "ToolTip": "D:\\Github\\CyberDepot\\docs\\payloads\\search_engine_hacking\\google_dorks.md",
+              "RelativeToolTip": "docs\\payloads\\search_engine_hacking\\google_dorks.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-03-17T04:18:42.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "reverse_shells.md",
+              "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\payloads\\network_exploits\\reverse_shells.md",
+              "RelativeDocumentMoniker": "docs\\payloads\\network_exploits\\reverse_shells.md",
+              "ToolTip": "D:\\Github\\CyberDepot\\docs\\payloads\\network_exploits\\reverse_shells.md",
+              "RelativeToolTip": "docs\\payloads\\network_exploits\\reverse_shells.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-03-17T04:18:41.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "botnets.md",
+              "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\payloads\\network_exploits\\botnets.md",
+              "RelativeDocumentMoniker": "docs\\payloads\\network_exploits\\botnets.md",
+              "ToolTip": "D:\\Github\\CyberDepot\\docs\\payloads\\network_exploits\\botnets.md",
+              "RelativeToolTip": "docs\\payloads\\network_exploits\\botnets.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-03-17T04:18:40.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "password_cracking.md",
+              "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\payloads\\credential_attacks\\password_cracking.md",
+              "RelativeDocumentMoniker": "docs\\payloads\\credential_attacks\\password_cracking.md",
+              "ToolTip": "D:\\Github\\CyberDepot\\docs\\payloads\\credential_attacks\\password_cracking.md",
+              "RelativeToolTip": "docs\\payloads\\credential_attacks\\password_cracking.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-03-17T04:18:39.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "vuln_boelter_blue.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\vuln_disclosures\\vuln_boelter_blue.md",
               "RelativeDocumentMoniker": "docs\\vuln_disclosures\\vuln_boelter_blue.md",
@@ -143,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "htb_Synced.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\htb\\starting_point\\htb_Synced.md",
               "RelativeDocumentMoniker": "docs\\htb\\starting_point\\htb_Synced.md",
@@ -156,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "htb_mongod.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\htb\\starting_point\\htb_mongod.md",
               "RelativeDocumentMoniker": "docs\\htb\\starting_point\\htb_mongod.md",
@@ -169,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "htb_Bike.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\htb\\starting_point\\htb_Bike.md",
               "RelativeDocumentMoniker": "docs\\htb\\starting_point\\htb_Bike.md",
@@ -182,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "index.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\vuln_disclosures\\index.md",
               "RelativeDocumentMoniker": "docs\\vuln_disclosures\\index.md",
@@ -195,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "index.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\reconnaissance\\index.md",
               "RelativeDocumentMoniker": "docs\\reconnaissance\\index.md",
@@ -207,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 7,
               "Title": "credential_stuffing.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\payloads\\credential_attacks\\credential_stuffing.md",
               "RelativeDocumentMoniker": "docs\\payloads\\credential_attacks\\credential_stuffing.md",
@@ -215,11 +283,12 @@
               "RelativeToolTip": "docs\\payloads\\credential_attacks\\credential_stuffing.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-03-16T21:02:09.23Z"
+              "WhenOpened": "2025-03-16T21:02:09.23Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "mkdocs.yml",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\mkdocs.yml",
               "RelativeDocumentMoniker": "mkdocs.yml",
@@ -232,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "index.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\htb\\starting_point\\index.md",
               "RelativeDocumentMoniker": "docs\\htb\\starting_point\\index.md",
@@ -245,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 2,
               "Title": "csrf.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\payloads\\web_exploits\\csrf.md",
               "RelativeDocumentMoniker": "docs\\payloads\\web_exploits\\csrf.md",
@@ -253,11 +322,12 @@
               "RelativeToolTip": "docs\\payloads\\web_exploits\\csrf.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-03-16T21:01:40.666Z"
+              "WhenOpened": "2025-03-16T21:01:40.666Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 1,
               "Title": "sql_injection.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\payloads\\web_exploits\\sql_injection.md",
               "RelativeDocumentMoniker": "docs\\payloads\\web_exploits\\sql_injection.md",
@@ -265,23 +335,25 @@
               "RelativeToolTip": "docs\\payloads\\web_exploits\\sql_injection.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-03-16T21:01:33.24Z"
+              "WhenOpened": "2025-03-16T21:01:33.24Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 0,
               "Title": "xss.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\payloads\\web_exploits\\xss.md",
               "RelativeDocumentMoniker": "docs\\payloads\\web_exploits\\xss.md",
               "ToolTip": "D:\\Github\\CyberDepot\\docs\\payloads\\web_exploits\\xss.md",
               "RelativeToolTip": "docs\\payloads\\web_exploits\\xss.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAAAOUAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-03-16T21:01:15.735Z"
+              "WhenOpened": "2025-03-16T21:01:15.735Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "index.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\payloads\\index.md",
               "RelativeDocumentMoniker": "docs\\payloads\\index.md",
@@ -293,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "custom.css",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\css\\custom.css",
               "RelativeDocumentMoniker": "docs\\css\\custom.css",
@@ -306,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "index.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\htb\\retired_machines\\index.md",
               "RelativeDocumentMoniker": "docs\\htb\\retired_machines\\index.md",
@@ -318,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "htb_mongod.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\htb_mongod.md",
               "RelativeDocumentMoniker": "docs\\htb_mongod.md",
@@ -330,20 +402,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "index.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\index.md",
               "RelativeDocumentMoniker": "docs\\index.md",
               "ToolTip": "D:\\Github\\CyberDepot\\docs\\index.md",
               "RelativeToolTip": "docs\\index.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2025-03-16T19:10:31.767Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "vuln_boelter_blue.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\vuln_boelter_blue.md",
               "RelativeDocumentMoniker": "docs\\vuln_boelter_blue.md",
@@ -356,7 +428,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "index.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\auth_bypass\\index.md",
               "RelativeDocumentMoniker": "docs\\auth_bypass\\index.md",
@@ -368,7 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "index.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\wifi_hacking\\index.md",
               "RelativeDocumentMoniker": "docs\\wifi_hacking\\index.md",
@@ -380,7 +452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "xsspayloads.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\xsspayloads.md",
               "RelativeDocumentMoniker": "docs\\xsspayloads.md",
@@ -392,7 +464,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "index.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\htb\\index.md",
               "RelativeDocumentMoniker": "docs\\htb\\index.md",
@@ -404,7 +476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "payloads.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\payloads.md",
               "RelativeDocumentMoniker": "docs\\payloads.md",
@@ -416,7 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "retired1.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\htb\\retired_machines\\retired1.md",
               "RelativeDocumentMoniker": "docs\\htb\\retired_machines\\retired1.md",
@@ -428,7 +500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "wifi.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\wifi.md",
               "RelativeDocumentMoniker": "docs\\wifi.md",
@@ -440,7 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "googledorks.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\googledorks.md",
               "RelativeDocumentMoniker": "docs\\googledorks.md",
@@ -452,7 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "2fabypasscsrf.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\2fabypasscsrf.md",
               "RelativeDocumentMoniker": "docs\\2fabypasscsrf.md",
@@ -464,7 +536,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "shodan.md",
               "DocumentMoniker": "D:\\Github\\CyberDepot\\docs\\shodan.md",
               "RelativeDocumentMoniker": "docs\\shodan.md",
