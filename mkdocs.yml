@@ -46,6 +46,8 @@ nav:
       - "Retired Machines":
           - "Machines":
               - htb/retired_machines/retired1.md
+  - Full Disclosure:
+       - "Boelter Blue System Management v1.3": vuln_disclosures/vuln_boelter_blue.md
 
 
 
