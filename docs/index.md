@@ -1,25 +1,44 @@
-# 🚀 Welcome to CyberDepot — Your Ultimate Payload Repository
+
+# 🚀 Welcome to CyberDepot — Your Ultimate Cybersecurity Resource
 
 <div style="float:left; margin-right:20px;">
   <img src="img/index.png" alt="CyberDepot Image" style="max-width: 300px;">
 </div>
 
-**Welcome to CyberDepot**, where cutting-edge penetration testing resources meet enthusiasts and professionals alike. Dive into our meticulously curated collection of payloads, scripts, and cheat sheets, designed to arm cybersecurity warriors with the tools they need. 🛡️
+**Welcome to CyberDepot**, a meticulously curated knowledge base designed for cybersecurity professionals, ethical hackers, and penetration testers. Whether you're looking for **payloads, reconnaissance tools, authentication bypass techniques, or HTB write-ups**, CyberDepot is your go-to repository for offensive security techniques. 🛡️
 
-Elevate your hacking prowess with our arsenal, ranging from **reverse shells** to **Wi-Fi hacking** techniques. We provide state-of-the-art strategies in **cloud security** and **red team operations**, ensuring you're not just prepared, but ahead of the curve in the ever-evolving landscape of cyber threats.
+This repository evolves alongside the cybersecurity landscape, continuously updated with **real-world exploits, methodologies, and security research.**
 
-## 🔍 Explore Our Diverse Categories
+## 🔍 Explore Our Knowledge Base
 
-Discover our expansive range of categories, each meticulously crafted to enhance different aspects of your cybersecurity journey:
+CyberDepot is structured into various sections, making it easy to find what you need:
 
-- [**Payloads and Reverse Shells**](http://127.0.0.1:8000/InfoSec-DB/CyberDepot/payloads/) 📡: Unleash advanced strategies to establish and maintain unauthorized access.
-- [**WiFi Hacking and Password Cracking**](http://127.0.0.1:8000/InfoSec-DB/CyberDepot/wifi/) 🔓: Sidestep security measures to uncover hidden credentials.
-- [**Google Dorks and Botnets**](http://127.0.0.1:8000/InfoSec-DB/CyberDepot/google-dorks/) 🕸️: Master sophisticated search techniques and harness botnets for potent network assaults.
-- [**Cloud and Container Security**](http://127.0.0.1:8000/InfoSec-DB/CyberDepot/cloud/) ☁️: Navigate the intricacies of contemporary cloud and container technologies.
-- [**Methodology and Red Team Operations**](http://127.0.0.1:8000/InfoSec-DB/CyberDepot/methodology/) 📊: Implement systematic methodologies for comprehensive security audits.
+### 🛠️ **Payloads & Exploits**
+- **Web Exploits**: XSS Attacks, SQL Injection, CSRF Exploits.
+- **Credential Attacks**: Password Cracking, Credential Stuffing.
+- **Network Exploits**: Botnets, Reverse Shells.
+- **Search Engine Hacking**: Google Dorks.
 
-**CyberDepot** is not static; it evolves with the cyber landscape. Join us on our mission to bolster the digital realm, one innovative payload at a time.
+### 🔎 **Reconnaissance & OSINT**
+- **Tools**: Shodan, Nmap.
+- **Cheatsheets**: Quick references for reconnaissance techniques.
+
+### 🔓 **Authentication Bypass**
+- **OTP Bypass Techniques**: Exploiting weak multi-factor authentication.
+- **Password Reset Poisoning**: Hijacking password recovery mechanisms.
+- **2FA Bypass via CSRF**: Exploiting web authentication flaws.
+
+### 📢 **Vulnerability Disclosures**
+- **Reports on discovered vulnerabilities**, including Boelter Blue System Management v1.3.
+
+### 📡 **WiFi Hacking**
+- **WiFi Exploits**: Techniques for network penetration testing.
+
+### 🏆 **Hack The Box (HTB) Write-ups**
+- **Starting Point Machines**: Beginner-friendly HTB walkthroughs.
+- **Retired Machines**: Step-by-step solutions for past HTB challenges.
 
 ---
 
-> 🌐 **_CyberDepot_ is a dynamic, community-driven repository. We invite insights and contributions from cybersecurity enthusiasts worldwide. Let’s collaborate to shape a safer, more secure digital future._**
+> 🌐 **_CyberDepot is a community-driven repository. We welcome contributions from cybersecurity researchers worldwide. Together, we can advance knowledge and strengthen digital security._**
+
