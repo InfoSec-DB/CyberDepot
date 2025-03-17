@@ -2,7 +2,7 @@
 
 ![HTB Banner](https://www.hackthebox.com/badge/image/your-badge-id)
 
-## 🔥 Overview
+# 🔥 Overview
 **Machine Name:** Mongod  
 **Difficulty:** Easy  
 **Vulnerability:** MongoDB Misconfiguration  
@@ -13,7 +13,7 @@
 
 ## 🎯 **Target Enumeration & Recon**
 
-### **1️⃣ Nmap Scan**
+# **1️⃣ Nmap Scan**
 We start with an **Nmap** scan to identify open ports and services running on the target machine:
 
 ```bash
@@ -29,10 +29,10 @@ MongoDB is running on **port 27017**, and based on the **version (3.6.8)**, it m
 
 ---
 
-## 🚀 **Exploitation: Unauthenticated MongoDB Access**
+# 🚀 **Exploitation: Unauthenticated MongoDB Access**
 MongoDB sometimes allows **unauthenticated access**, meaning we can connect and extract information **without credentials**.
 
-### **2️⃣ Connecting to MongoDB**
+# **2️⃣ Connecting to MongoDB**
 We use `mongosh` (MongoDB shell) to check if we have direct access:
 
 ```bash
@@ -58,7 +58,7 @@ The **`sensitive_information`** database seems interesting.
 
 ---
 
-## 🎯 **Extracting the Flag**
+# 🎯 **Extracting the Flag**
 Let's switch to the **sensitive_information** database and list its collections:
 
 ```javascript
@@ -91,7 +91,7 @@ db.flag.find();
 
 ---
 
-## 🔥 **Automating the Exploit**
+# 🔥 **Automating the Exploit**
 Instead of doing this manually, we created a Python exploit:
 
 ```python
@@ -148,7 +148,7 @@ python3 mongo_pwn.py
 
 ---
 
-## 🎯 **Conclusion**
+# 🎯 **Conclusion**
 This box demonstrates the **importance of securing MongoDB** against unauthenticated access. The key takeaways:
 
 - Always **require authentication** for databases.
@@ -159,7 +159,7 @@ This box demonstrates the **importance of securing MongoDB** against unauthentic
 
 ---
 
-## 💀 **AfterDark Security**
+# 💀 **AfterDark Security**
 Follow **#AfterDark** for more **CTF solutions, pentesting tricks, and cybersecurity research!**  
 🚀 **GitHub:** [Your Repo Link]  
 🐦 **Twitter:** [Your Twitter Handle]  
