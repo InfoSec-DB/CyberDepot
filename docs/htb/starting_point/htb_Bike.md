@@ -1,7 +1,5 @@
 ﻿# HTB Bike - SSTI Exploit Write-up
 
-![Bike Logo](https://infosec-db.github.io/CyberDepot/assets/htb-bike.png)
-
 # Overview
 **HTB Bike** is a *Hack The Box* machine that involves exploiting a **Server-Side Template Injection (SSTI)** vulnerability in a **Node.js Handlebars template engine**. This write-up provides a detailed walkthrough of the exploitation process and includes a fully automated **SQLmap-styled** exploit script.
 

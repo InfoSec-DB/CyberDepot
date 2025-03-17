@@ -37,7 +37,6 @@ nav:
       - "Overview": wifi_hacking/index.md
       - "WiFi Exploits": wifi_hacking/wifi_exploits.md
   - HTB Writeups:
-      - "Overview": htb/index.md
       - "Starting Point":
           - "Machines":
               - htb/starting_point/htb_mongod.md
@@ -45,7 +44,6 @@ nav:
               - htb/starting_point/htb_Synced.md
 
       - "Retired Machines":
-          - "Overview": htb/retired_machines/index.md
           - "Machines":
               - htb/retired_machines/retired1.md
 

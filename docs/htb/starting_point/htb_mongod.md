@@ -1,7 +1,5 @@
 ﻿# Hack The Box - Mongod Writeup
 
-![HTB Banner](https://www.hackthebox.com/badge/image/your-badge-id)
-
 # 🔥 Overview
 **Machine Name:** Mongod  
 **Difficulty:** Easy  
