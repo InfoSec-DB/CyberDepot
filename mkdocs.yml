@@ -41,6 +41,7 @@ nav:
               - htb/starting_point/htb_mongod.md
               - htb/starting_point/htb_Bike.md
               - htb/starting_point/htb_Synced.md
+              - htb/starting_point/htb_Funnel.md
 
       - "Retired Machines":
           - "Machines":
