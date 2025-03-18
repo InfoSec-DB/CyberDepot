@@ -2,122 +2,126 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/vuln_boelter_blue/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/auth_bypass/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/auth_bypass/2fa_bypass_via_csrf/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/auth_bypass/otp_bypass/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/auth_bypass/password_reset_poisoning/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/htb/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/htb/retired_machines/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/htb/retired_machines/retired1/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/htb/starting_point/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/htb/starting_point/htb_Bike/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/InfoSec-DB/CyberDepot/htb/starting_point/htb_Funnel/</loc>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/htb/starting_point/htb_Synced/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/htb/starting_point/htb_mongod/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/payloads/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/payloads/credential_attacks/credential_stuffing/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/payloads/credential_attacks/password_cracking/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/payloads/network_exploits/botnets/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/payloads/network_exploits/reverse_shells/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/payloads/search_engine_hacking/google_dorks/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/payloads/web_exploits/csrf/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/payloads/web_exploits/sql_injection/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/payloads/web_exploits/xss/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/reconnaissance/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/reconnaissance/cheatsheets/shodan_cheatsheet/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/reconnaissance/tools/nmap/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/reconnaissance/tools/shodan/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/vuln_disclosures/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/vuln_disclosures/vuln_boelter_blue/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/wifi_hacking/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
     <url>
          <loc>https://github.com/InfoSec-DB/CyberDepot/wifi_hacking/wifi_exploits/</loc>
-         <lastmod>2025-03-17</lastmod>
+         <lastmod>2025-03-18</lastmod>
     </url>
 </urlset>

